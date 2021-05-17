@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LawyerClass_Method
 {
@@ -10,9 +6,48 @@ namespace LawyerClass_Method
     {
         static void Main(string[] args)
         {
-            Lawyer jamesTiuLawyer = new Lawyer("James", 3, 5000);
-            Console.WriteLine($"Facts: {na");
+            Lawyer jamesTiuLawyer = new Lawyer("James", 5, 5000, 15, 4);
+            Console.WriteLine($"Facts: {jamesTiuLawyer.name} has {jamesTiuLawyer.numberOfTrials} trials and {jamesTiuLawyer.numberOfTrials} hearings");
             Console.ReadLine();
+
+            Lawyer jessicaJimenez = new Lawyer("Jessica", 4, 1000, 14, 7);
+            Console.WriteLine($"Facts : {jessicaJimenez.name} has {jessicaJimenez.numberOfTrials} trials and {jessicaJimenez.numberOfTrials} hearings");
+            Console.ReadLine();
+
+            Lawyer meghanMelendez = new Lawyer("megMel", 6, 500, 16, 5);
+
+            Trial juryTrial = new Trial("Smith v Jones", 30, 12, "Mowrery");
+            {
+
+
+                if (jamesTiuLawyer.numberOfTrials > jessicaJimenez.numberOfTrials)
+                {
+                    Console.WriteLine("james wins");
+                }
+                else
+                {
+                    Console.WriteLine("jessica wins.");
+                }
+                Console.ReadLine();
+
+                {
+                    jessicaJimenez.DisplayLawyerParameters();
+                    jamesTiuLawyer.DisplayLawyerParameters();
+                    meghanMelendez.DisplayLawyerParameters();
+                    meghanMelendez.CheckInOffice();
+                    meghanMelendez.CareerTotalTrials();
+                    meghanMelendez.CareerTotalHearings();
+                    juryTrial.DisplayTrialParameters();
+
+                    Console.ReadLine();
+
+                }
+
+
+
+            }
+
+
         }
     }
 }
