@@ -15,8 +15,9 @@ namespace LawyerClass_Method
             Console.ReadLine();
 
             Lawyer meghanMelendez = new Lawyer("megMel", 6, 500, 16, 5);
+            PotentialJuror juror1 = new PotentialJuror(27, "Jess", "not guilty");
 
-            Trial juryTrial = new Trial("Smith v Jones", 30, 12, "Mowrery");
+            Trial juryTrial = new Trial("Smith v Jones", 30, 12, "Mowrery", 20, 30);
             {
 
 
@@ -38,7 +39,10 @@ namespace LawyerClass_Method
                     meghanMelendez.CareerTotalTrials();
                     meghanMelendez.CareerTotalHearings();
                     juryTrial.DisplayTrialParameters();
-
+                    juryTrial.TotalNumberAppearances();
+                    juryTrial.JurySelection();
+                    juror1.ToString();
+                    juror1.JurorFacts();
                     Console.ReadLine();
 
                 }

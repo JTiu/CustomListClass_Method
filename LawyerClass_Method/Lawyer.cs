@@ -45,7 +45,7 @@ namespace LawyerClass_Method
 
         public void DisplayLawyerParameters()
         {
-            Console.WriteLine($"{name}, {yearsExperience} years experience");
+            Console.WriteLine($"\n{name}, {yearsExperience} years experience");
             Console.ReadLine();
         }
     }

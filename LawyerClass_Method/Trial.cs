@@ -11,31 +11,46 @@ namespace LawyerClass_Method
         //has
         public string name;
         public int numberOfPotentialJurors;
-        public int seatedJurors;
+        public int jurors;
         public string judge;
 
-        public int numberOfTrials;
-        public int numberOfHearings;
+        public int trials;
+        public int hearings;
         string result;
 
         //Constructor
 
-        public Trial (string trialName, int numberPotentialJurors, int seatedJurors, string judgeName)
+        public Trial (string trialName, int numberPotentialJurors, int seatedJurors, string judgeName, int numberOfTrials, int numberOfHearings)
         {
             name = trialName;
             numberOfPotentialJurors = numberPotentialJurors;
-            numberOfHearings = seatedJurors;
-            judge = judgeName;           ;
+            judge = judgeName;     
+            jurors = seatedJurors;
+            hearings = numberOfHearings;
+            trials = numberOfTrials;
         }
 
         //can do
         public void DisplayTrialParameters()
         {
-            Console.WriteLine($"{name}, {numberOfPotentialJurors} possible jurors, {seatedJurors} seated jurors. Presiding Judge : {judge}");
+            Console.WriteLine();
+            Console.WriteLine($"{name}, {numberOfPotentialJurors} possible jurors, {jurors} seated jurors. Presiding Judge : {judge}");
             Console.ReadLine();
         }
+         public void TotalNumberAppearances()
+        {
+            Console.WriteLine($"\ntotal appearances of counsel: {trials} trials + {hearings} hearings");
+            int combinedAppearances = trials + hearings;
+            Console.WriteLine($"\nCounsel has {combinedAppearances} appearances");
+            
+        }
 
-
+        public void JurySelection()
+        {
+            int jurorsNotChosen = numberOfPotentialJurors - jurors;
+            Console.WriteLine($"\nThese many possible jurors were not seated: {jurorsNotChosen}");
+            Console.ReadLine();
+        }
 
 
     }
