@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Lawyer.cs" />
+    <Compile Include="LegalFirmEmployee.cs" />
     <Compile Include="PotentialJuror.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

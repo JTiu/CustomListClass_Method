@@ -35,7 +35,7 @@ namespace LawyerClass_Method
         {
             Console.WriteLine();
             Console.WriteLine($"{name}, {numberOfPotentialJurors} possible jurors, {jurors} seated jurors. Presiding Judge : {judge}");
-            Console.ReadLine();
+            //Console.ReadLine();
         }
          public void TotalNumberAppearances()
         {
@@ -49,7 +49,7 @@ namespace LawyerClass_Method
         {
             int jurorsNotChosen = numberOfPotentialJurors - jurors;
             Console.WriteLine($"\nThese many possible jurors were not seated: {jurorsNotChosen}");
-            Console.ReadLine();
+            //Console.ReadLine();
         }
 
 

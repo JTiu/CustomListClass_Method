@@ -24,7 +24,7 @@ namespace LawyerClass_Method
         public void JurorFacts()
         {
             Console.WriteLine($"{name} is {age} y.o. and will return {willConvict}");
-            Console.ReadLine();
+            //Console.ReadLine();
         }
     }
 }
