@@ -96,7 +96,13 @@ namespace LawyerClass_Method
             }
             return result;
         }
-
+        public CourthouseRoute<string> CreateRoute()
+        {
+            CourthouseRoute<string> object2 = new CourthouseRoute<string>();
+            Console.WriteLine("do the string thing");
+            Console.ReadLine();
+            return object2;
+        }
     }
 
 

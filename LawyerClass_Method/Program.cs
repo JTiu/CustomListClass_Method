@@ -5,7 +5,23 @@ namespace LawyerClass_Method
     class Program
     {
         static void Main(string[] args)
-        {
+        {//starts menu
+            Menu startMenu = new Menu();
+            int optionPicked;
+            optionPicked = startMenu.DrawMenu(); //
+
+            while (optionPicked != 7)
+            {
+                Console.Clear();
+                startMenu.DirectUser(optionPicked);
+                Console.Clear();
+                optionPicked = startMenu.DrawMenu();
+
+            }
+            //ends menu
+            Console.WriteLine("Press any button to exit application");
+
+            Console.ReadKey();
             Console.WriteLine("The lawyer will cover these courtrooms: ");
             CourthouseRoute<string> NM_RouteCourthouse = new CourthouseRoute<string>();
             NM_RouteCourthouse.Add("Las Cruces");
@@ -22,7 +38,7 @@ namespace LawyerClass_Method
             NM_RouteCourthouse.Add("Truth or Consequences");
             NM_RouteCourthouse.Add("Cloudcroft");
             //Console.WriteLine($"Stops:  {NM_RouteCourthouse.a}, {NM_RouteCourthouse.b}, {NM_RouteCourthouse.c}");
-           
+
 
             Console.WriteLine($"(From the Main) 'Courthouses.ToString':\n {NM_RouteCourthouse.ToString()}");
             Console.ReadLine();
@@ -31,7 +47,7 @@ namespace LawyerClass_Method
             Lawyer jamesTiuLawyer = new Lawyer("James", 5, 2000, 15, 4);
             Console.WriteLine($"Facts: {jamesTiuLawyer.name} has {jamesTiuLawyer.numberOfTrials} trials and {jamesTiuLawyer.numberOfHearings} hearings");
             //Console.ReadLine();
-            
+
             //instantiate another lawyer
             Lawyer jessicaJimenez = new Lawyer("Jessica", 4, 1000, 14, 7);
             Console.WriteLine($"Facts : {jessicaJimenez.name} has {jessicaJimenez.numberOfTrials} trials and {jessicaJimenez.numberOfHearings} hearings");

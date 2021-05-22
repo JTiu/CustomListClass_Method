@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="CourthouseRoute.cs" />
     <Compile Include="Lawyer.cs" />
+    <Compile Include="LawyerMenu.cs" />
     <Compile Include="LegalFirmEmployee.cs" />
     <Compile Include="PotentialJuror.cs" />
     <Compile Include="Program.cs" />
