@@ -21,26 +21,6 @@ namespace LawyerClass_Method
             //ends menu
             Console.WriteLine("Press any button to exit application");
 
-            Console.ReadKey();
-            Console.WriteLine("The lawyer will cover these courtrooms: ");
-            CourthouseRoute<string> NM_RouteCourthouse = new CourthouseRoute<string>();
-            NM_RouteCourthouse.Add("Las Cruces");
-            NM_RouteCourthouse.Add("Mesilla");
-            NM_RouteCourthouse.Add("Roswell");
-            NM_RouteCourthouse.Add("Albuquerque");
-            NM_RouteCourthouse.Add("Santa Fe");
-            NM_RouteCourthouse.Add("Rio Rancho");
-            NM_RouteCourthouse.Add("Hobbs");
-            NM_RouteCourthouse.Add("Alamogordo");
-            NM_RouteCourthouse.Add("Farmington");
-            NM_RouteCourthouse.Add("Clovis");
-            NM_RouteCourthouse.Add("White Sands");
-            NM_RouteCourthouse.Add("Truth or Consequences");
-            NM_RouteCourthouse.Add("Cloudcroft");
-            //Console.WriteLine($"Stops:  {NM_RouteCourthouse.a}, {NM_RouteCourthouse.b}, {NM_RouteCourthouse.c}");
-
-
-            Console.WriteLine($"(From the Main) 'Courthouses.ToString':\n {NM_RouteCourthouse.ToString()}");
             Console.ReadLine();
             Console.Clear();
             //instantiate new lawyer

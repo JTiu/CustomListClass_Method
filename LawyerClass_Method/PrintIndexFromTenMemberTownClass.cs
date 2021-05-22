@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LawyerClass_Method
 {
-    public class CourthouseRoute<T>
+    class PrintIndexFromTenMemberTownClass<T>
     {
         private T[] stopsOnRoute; //array indicated by the T[], followed by name, need a constructor
 
@@ -26,7 +26,7 @@ namespace LawyerClass_Method
 
         
         //public CourthouseRoute(string a, string b, string c, string d, string e, string f, string g, string h, string j, string k, string l, string m)
-        public CourthouseRoute()//initializes the array with length of 10 items. Meets user story#1 
+        public PrintIndexFromTenMemberTownClass()//initializes the array with length of 10 items. Meets user story#1 
         //    //As a developer, I want to use a custom-built list class that stores its values in an array, so that I can store any data type in my collection.
         //    //capacity is ten at this moment
         {
@@ -90,7 +90,7 @@ namespace LawyerClass_Method
             }
             return result;
         }
-        public CourthouseRoute<string> CreateRoute()
+        public CourthouseRoute<string> CreateShortRoute()
         {
             CourthouseRoute<string> NM_RouteToAdd = new CourthouseRoute<string>();
             NM_RouteToAdd.Add("Las Cruces");
@@ -103,33 +103,11 @@ namespace LawyerClass_Method
             NM_RouteToAdd.Add("Alamogordo");
             NM_RouteToAdd.Add("Farmington");
             NM_RouteToAdd.Add("Clovis");
-            NM_RouteToAdd.Add("White Sands");
-            NM_RouteToAdd.Add("Truth or Consequences");
-            NM_RouteToAdd.Add("Cloudcroft");
-            Console.WriteLine($"Start a collection of thirteen New Mexico Courthouses:\n{NM_RouteToAdd}");
+            
+            Console.WriteLine($"A collection of ten New Mexico Courthouses:\n{NM_RouteToAdd}");
             return NM_RouteToAdd;
           
         }
-        public CourthouseRoute<string> CreateRemovalRoute()
-        {
-            CourthouseRoute<string> NM_RouteToAdd = new CourthouseRoute<string>();
-            NM_RouteToAdd.Add("Las Cruces");
-            NM_RouteToAdd.Add("Mesilla");
-            NM_RouteToAdd.Add("Roswell");
-            NM_RouteToAdd.Add("Albuquerque");
-            NM_RouteToAdd.Add("Santa Fe");
-            NM_RouteToAdd.Add("White Sands");
-            NM_RouteToAdd.Add("Truth or Consequences");
-            NM_RouteToAdd.Add("Cloudcroft");
-            Console.WriteLine($"A collection of eight New Mexico Courthouses, for removal:\n{NM_RouteToAdd}");
-            return NM_RouteToAdd;
-
-        }
+        
     }
-
-
-
-
-
-
 }

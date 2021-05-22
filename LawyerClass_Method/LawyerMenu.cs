@@ -78,11 +78,14 @@ namespace LawyerClass_Method
                     Console.ReadLine();
                     break;
                 case 2:
-                    //YourClassObject2 switchCaseObject2 = new YourClassObject2();
-                    //switchCaseObject2.CreateClassObject2();
+                    CourthouseRoute<string> NM_RouteCourthouseToDoSomethingElse = new CourthouseRoute<string>();
+                    NM_RouteCourthouseToDoSomethingElse.CreateRemovalRoute();
+                    Console.ReadLine();
                     break;
                 case 3:
-                    //YourClassObject3 switchCaseObject3 = new YourClassObject3();
+                    PrintIndexFromTenMemberTownClass<string> PrintFromIndex = new PrintIndexFromTenMemberTownClass<string>();
+                    PrintFromIndex.CreateShortRoute();
+                    Console.ReadLine(); 
                     //switchCaseObject3.CreateClassObject3();
                     break;
                 case 4:
