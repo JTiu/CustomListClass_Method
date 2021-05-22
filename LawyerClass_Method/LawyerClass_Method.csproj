@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CourthouseRoute.cs" />
     <Compile Include="Lawyer.cs" />
     <Compile Include="LegalFirmEmployee.cs" />
     <Compile Include="PotentialJuror.cs" />

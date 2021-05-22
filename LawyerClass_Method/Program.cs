@@ -5,11 +5,33 @@ namespace LawyerClass_Method
     class Program
     {
         static void Main(string[] args)
-        {  //instantiate new lawyer
+        {
+            Console.WriteLine("The lawyer will cover these courtrooms: ");
+            CourthouseRoute<string> NM_RouteCourthouse = new CourthouseRoute<string>();
+            NM_RouteCourthouse.Add("Las Cruces");
+            NM_RouteCourthouse.Add("Mesilla");
+            NM_RouteCourthouse.Add("Roswell");
+            NM_RouteCourthouse.Add("Albuquerque");
+            NM_RouteCourthouse.Add("Santa Fe");
+            NM_RouteCourthouse.Add("Rio Rancho");
+            NM_RouteCourthouse.Add("Hobbs");
+            NM_RouteCourthouse.Add("Alamogordo");
+            NM_RouteCourthouse.Add("Farmington");
+            NM_RouteCourthouse.Add("Clovis");
+            NM_RouteCourthouse.Add("White Sands");
+            NM_RouteCourthouse.Add("Truth or Consequences");
+            NM_RouteCourthouse.Add("Cloudcroft");
+            //Console.WriteLine($"Stops:  {NM_RouteCourthouse.a}, {NM_RouteCourthouse.b}, {NM_RouteCourthouse.c}");
+           
+
+            Console.WriteLine($"(From the Main) 'Courthouses.ToString':\n {NM_RouteCourthouse.ToString()}");
+            Console.ReadLine();
+            Console.Clear();
+            //instantiate new lawyer
             Lawyer jamesTiuLawyer = new Lawyer("James", 5, 2000, 15, 4);
             Console.WriteLine($"Facts: {jamesTiuLawyer.name} has {jamesTiuLawyer.numberOfTrials} trials and {jamesTiuLawyer.numberOfHearings} hearings");
             //Console.ReadLine();
-
+            
             //instantiate another lawyer
             Lawyer jessicaJimenez = new Lawyer("Jessica", 4, 1000, 14, 7);
             Console.WriteLine($"Facts : {jessicaJimenez.name} has {jessicaJimenez.numberOfTrials} trials and {jessicaJimenez.numberOfHearings} hearings");
