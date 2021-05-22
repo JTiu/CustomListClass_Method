@@ -13,7 +13,7 @@ namespace LawyerClass_Method
 
         public int DrawMenu()  //going to draw my menu of choices, contestant, sweep, winner
         {
-            Console.WriteLine("The Custom List Menu");
+            Console.WriteLine("The New Mexico Lawyer Menu");
             Console.WriteLine("------------------------------------");
             Console.WriteLine();
             Console.WriteLine("1. User Story #1");

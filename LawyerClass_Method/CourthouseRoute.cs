@@ -84,8 +84,8 @@ namespace LawyerClass_Method
             {
                 if (item != null)
                 {
-                    result += item.ToString();
-                    result += "\nThis item goes to string: ";
+                    result += "\nadd, to string: "; result += item.ToString();
+                    
                 }
             }
             return result;
@@ -106,10 +106,9 @@ namespace LawyerClass_Method
             NM_RouteToAdd.Add("White Sands");
             NM_RouteToAdd.Add("Truth or Consequences");
             NM_RouteToAdd.Add("Cloudcroft");
-            Console.WriteLine($"from method {NM_RouteToAdd}");
+            Console.WriteLine($"Start a collection of thirteen New Mexico Courthouses:\n{NM_RouteToAdd}");
             return NM_RouteToAdd;
-            
-            Console.ReadLine();
+          
         }
     }
 
