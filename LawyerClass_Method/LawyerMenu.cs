@@ -73,8 +73,9 @@ namespace LawyerClass_Method
             switch (option)
             {
                 case 1:
-                    CourthouseRoute<string> NM_RouteCourthouse = new CourthouseRoute<string>();
-                    NM_RouteCourthouse.CreateRoute();
+                    CourthouseRoute<string> NM_RouteCourthouseToPrint = new CourthouseRoute<string>();
+                    NM_RouteCourthouseToPrint.CreateRoute();
+                    Console.ReadLine();
                     break;
                 case 2:
                     //YourClassObject2 switchCaseObject2 = new YourClassObject2();

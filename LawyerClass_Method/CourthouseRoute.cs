@@ -24,17 +24,11 @@ namespace LawyerClass_Method
         public string l;
         public string m;
 
-        //public CourthouseRoute()
-
-        //{
-        //    stopsOnRoute = new T[10]; //initializes the array with length of 10 items. Meets user story#1 
+        
+        //public CourthouseRoute(string a, string b, string c, string d, string e, string f, string g, string h, string j, string k, string l, string m)
+        public CourthouseRoute()//initializes the array with length of 10 items. Meets user story#1 
         //    //As a developer, I want to use a custom-built list class that stores its values in an array, so that I can store any data type in my collection.
         //    //capacity is ten at this moment
-        //}
-
-
-        //public CourthouseRoute(string a, string b, string c, string d, string e, string f, string g, string h, string j, string k, string l, string m)
-        public CourthouseRoute()
         {
             stopsOnRoute = new T[10];
            
@@ -98,10 +92,24 @@ namespace LawyerClass_Method
         }
         public CourthouseRoute<string> CreateRoute()
         {
-            CourthouseRoute<string> object2 = new CourthouseRoute<string>();
-            Console.WriteLine("do the string thing");
+            CourthouseRoute<string> NM_RouteToAdd = new CourthouseRoute<string>();
+            NM_RouteToAdd.Add("Las Cruces");
+            NM_RouteToAdd.Add("Mesilla");
+            NM_RouteToAdd.Add("Roswell");
+            NM_RouteToAdd.Add("Albuquerque");
+            NM_RouteToAdd.Add("Santa Fe");
+            NM_RouteToAdd.Add("Rio Rancho");
+            NM_RouteToAdd.Add("Hobbs");
+            NM_RouteToAdd.Add("Alamogordo");
+            NM_RouteToAdd.Add("Farmington");
+            NM_RouteToAdd.Add("Clovis");
+            NM_RouteToAdd.Add("White Sands");
+            NM_RouteToAdd.Add("Truth or Consequences");
+            NM_RouteToAdd.Add("Cloudcroft");
+            Console.WriteLine($"from method {NM_RouteToAdd}");
+            return NM_RouteToAdd;
+            
             Console.ReadLine();
-            return object2;
         }
     }
 
