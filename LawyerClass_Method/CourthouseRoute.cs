@@ -24,14 +24,14 @@ namespace LawyerClass_Method
         public string l;
         public string m;
 
-        
+
         //public CourthouseRoute(string a, string b, string c, string d, string e, string f, string g, string h, string j, string k, string l, string m)
         public CourthouseRoute()//initializes the array with length of 10 items. Meets user story#1 
         //    //As a developer, I want to use a custom-built list class that stores its values in an array, so that I can store any data type in my collection.
         //    //capacity is ten at this moment
         {
             stopsOnRoute = new T[10];
-           
+
         }
 
         public void Add(T item) //does not return, so 'void' because will always be able to add a new value by 3 step process to double the capacvity if array is full. 
@@ -85,7 +85,7 @@ namespace LawyerClass_Method
                 if (item != null)
                 {
                     result += "\nadd, to string: "; result += item.ToString();
-                    
+
                 }
             }
             return result;
@@ -107,8 +107,10 @@ namespace LawyerClass_Method
             NM_RouteToAdd.Add("Truth or Consequences");
             NM_RouteToAdd.Add("Cloudcroft");
             Console.WriteLine($"Start a collection of thirteen New Mexico Courthouses:\n{NM_RouteToAdd}");
+            Console.WriteLine($"second town, by index is: {NM_RouteToAdd.stopsOnRoute[1]}");
+
             return NM_RouteToAdd;
-          
+
         }
         public CourthouseRoute<string> CreateRemovalRoute()
         {
@@ -122,6 +124,7 @@ namespace LawyerClass_Method
             NM_RouteToAdd.Add("Truth or Consequences");
             NM_RouteToAdd.Add("Cloudcroft");
             Console.WriteLine($"A collection of eight New Mexico Courthouses, for removal:\n{NM_RouteToAdd}");
+
             return NM_RouteToAdd;
 
         }

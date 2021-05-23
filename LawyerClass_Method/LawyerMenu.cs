@@ -83,7 +83,7 @@ namespace LawyerClass_Method
                     Console.ReadLine();
                     break;
                 case 3:
-                    PrintIndexFromTenMemberTownClass<string> PrintFromIndex = new PrintIndexFromTenMemberTownClass<string>();
+                    TestPrintIndex<string> PrintFromIndex = new TestPrintIndex<string>();
                     PrintFromIndex.CreateShortRoute();
                     Console.ReadLine(); 
                     //switchCaseObject3.CreateClassObject3();
