@@ -138,6 +138,24 @@ namespace LawyerClass_Method
             Console.WriteLine($"\nNow, count is: {Array.Count}");
             return Array;
         }
+        public TestPrintIndex<string> OverloadingOperators()
+        {
+            TestPrintIndex<string> firstArrayForOverload = new TestPrintIndex<string>();
+            firstArrayForOverload.Add("Las Cruces");
+            firstArrayForOverload.Add("Mesilla");
+            firstArrayForOverload.Add("Roswell");
+            Console.WriteLine($"\nAn array, for capacity check:\n{firstArrayForOverload}, capacity: {firstArrayForOverload.Capacity}");
+            Console.WriteLine($"\ncountcheck:\n{firstArrayForOverload.Count}");
+            TestPrintIndex<string> secondArrayForOverload = new TestPrintIndex<string>();
+            secondArrayForOverload.Add("El Paso");
+            secondArrayForOverload.Add("Amarillo");
+            secondArrayForOverload.Add("Fort Worth");
+            
+            Console.WriteLine($"\nAn array, for capacity check:\n{secondArrayForOverload}, capacity: {secondArrayForOverload.Capacity}");
+            Console.WriteLine($"\ncountcheck:\n{firstArrayForOverload.Count}");
+            return firstArrayForOverload;
+            return secondArrayForOverload;
+        }
 
     }
 

@@ -93,7 +93,9 @@ namespace LawyerClass_Method
                     Console.ReadLine();
                     break;
                 case 5:
-
+                    TestPrintIndex<string> overload = new TestPrintIndex<string>();
+                    overload.OverloadingOperators();
+                    Console.ReadLine();
                     break;
                 case 6:
 
