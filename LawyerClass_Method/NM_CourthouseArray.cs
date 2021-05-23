@@ -6,27 +6,12 @@ using System.Threading.Tasks;
 
 namespace LawyerClass_Method
 {
-    public class CourthouseRoute<T>
+    public class NM_CourthouseArray<T>
     {
         private T[] courthousesArray; //array indicated by the T[], followed by name, need a constructor
 
-        //variables: towns
-        public string a;
-        public string b;
-        public string c;
-        public string d;
-        public string e;
-        public string f;
-        public string g;
-        public string h;
-        public string j;
-        public string k;
-        public string l;
-        public string m;
-
-
-        //public CourthouseRoute(string a, string b, string c, string d, string e, string f, string g, string h, string j, string k, string l, string m)
-        public CourthouseRoute()//initializes the array with length of 10 items. Meets user story#1 
+      
+        public NM_CourthouseArray()//initializes the array with length of 10 items. Meets user story#1 
         //    //As a developer, I want to use a custom-built list class that stores its values in an array, so that I can store any data type in my collection.
         //    //capacity is ten at this moment
         {
@@ -119,15 +104,15 @@ namespace LawyerClass_Method
             {
                 if (item != null)
                 {
-                    result += "\nadd, to string: "; result += item.ToString();
+                    result += "\nadd, to courthouseArray: "; result += item.ToString();
 
                 }
             }
             return result;
         }
-        public CourthouseRoute<string> CreateRoute()
+        public NM_CourthouseArray<string> CreateRoute()
         {
-            CourthouseRoute<string> CourthouseToAdd = new CourthouseRoute<string>();
+            NM_CourthouseArray<string> CourthouseToAdd = new NM_CourthouseArray<string>();
             CourthouseToAdd.Add("Las Cruces");
             CourthouseToAdd.Add("Mesilla");
             CourthouseToAdd.Add("Roswell");
@@ -141,20 +126,20 @@ namespace LawyerClass_Method
             CourthouseToAdd.Add("White Sands");
             CourthouseToAdd.Add("Truth or Consequences");
             CourthouseToAdd.Add("Cloudcroft");
-            Console.WriteLine($"Start a collection of thirteen New Mexico Courthouses:\n{CourthouseToAdd}");
-            
+            Console.WriteLine($"Start an array of thirteen New Mexico Courthouses:\n{CourthouseToAdd}");
+            Console.WriteLine($" the capacity of the combined list: {CourthouseToAdd}");
 
             return CourthouseToAdd;
 
         }
-        public CourthouseRoute<string> RemoveCourthouse()
+        public NM_CourthouseArray<string> RemoveCourthouse()
         {
-            CourthouseRoute<string> CourthouseToRemove = new CourthouseRoute<string>();
+            NM_CourthouseArray<string> CourthouseToRemove = new NM_CourthouseArray<string>();
            
             CourthouseToRemove.Add("White Sands");
             CourthouseToRemove.Add("Truth or Consequences");
             CourthouseToRemove.Add("Cloudcroft");
-            Console.WriteLine($"A collection of three New Mexico Courthouses, for removal check:\n{CourthouseToRemove}");
+            Console.WriteLine($"An array of three New Mexico Courthouses, for removal check:\n{CourthouseToRemove}");
             
             Console.WriteLine($"\nfirst town is: {CourthouseToRemove.courthousesArray[0]}");
             Console.WriteLine($"second town is: {CourthouseToRemove.courthousesArray[1]}");
@@ -165,8 +150,7 @@ namespace LawyerClass_Method
 
             CourthouseToRemove.Remove(secondTown);
             CourthouseToRemove.Remove(thirdTown);
-            Console.WriteLine($"list after removal of second & third towns {CourthouseToRemove}");
-            //Console.WriteLine("placeholder, stop here");
+            Console.WriteLine($"\narray after removal of second & third towns {CourthouseToRemove}");
             return CourthouseToRemove;
 
         }

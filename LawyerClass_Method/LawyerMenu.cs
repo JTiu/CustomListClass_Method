@@ -16,10 +16,10 @@ namespace LawyerClass_Method
             Console.WriteLine("The New Mexico Lawyer Menu");
             Console.WriteLine("------------------------------------");
             Console.WriteLine();
-            Console.WriteLine("1. User Story #1");
-            Console.WriteLine("2. User Story #2");
-            Console.WriteLine("3. User Story #3");
-            Console.WriteLine("4. User Story #4");
+            Console.WriteLine("1. User Story #1: Store & Add to Array");
+            Console.WriteLine("2. User Story #2: Remove from Array");
+            Console.WriteLine("3. User Story #3: Index Array");
+            Console.WriteLine("4. User Story #4: Capacity Property");
             Console.WriteLine("5. User Story #5");
             Console.WriteLine("6. User Story #6");
             Console.WriteLine("7. User Story #7");
@@ -73,12 +73,12 @@ namespace LawyerClass_Method
             switch (option)
             {
                 case 1:
-                    CourthouseRoute<string> NM_RouteCourthouseToPrint = new CourthouseRoute<string>();
+                    NM_CourthouseArray<string> NM_RouteCourthouseToPrint = new NM_CourthouseArray<string>();
                     NM_RouteCourthouseToPrint.CreateRoute();
                     Console.ReadLine();
                     break;
                 case 2:
-                    CourthouseRoute<string> NM_CourthouseCollectionForRemoval = new CourthouseRoute<string>();
+                    NM_CourthouseArray<string> NM_CourthouseCollectionForRemoval = new NM_CourthouseArray<string>();
                     NM_CourthouseCollectionForRemoval.RemoveCourthouse();
                     Console.ReadLine();
                     break;
@@ -86,10 +86,11 @@ namespace LawyerClass_Method
                     TestPrintIndex<string> PrintFromIndex = new TestPrintIndex<string>();
                     PrintFromIndex.Index();
                     Console.ReadLine(); 
-                   
                     break;
                 case 4:
-
+                    TestPrintIndex<string> PrintCapacity = new TestPrintIndex<string>();
+                    PrintCapacity.CheckCapacityAndCount();
+                    Console.ReadLine();
                     break;
                 case 5:
 
