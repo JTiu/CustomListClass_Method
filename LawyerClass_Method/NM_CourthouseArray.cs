@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LawyerClass_Method
 {
@@ -10,7 +6,6 @@ namespace LawyerClass_Method
     {
         private T[] courthousesArray; //array indicated by the T[], followed by name, need a constructor
 
-      
         public NM_CourthouseArray()//initializes the array with length of 10 items. Meets user story#1 
         //    //As a developer, I want to use a custom-built list class that stores its values in an array, so that I can store any data type in my collection.
         //    //capacity is ten at this moment
@@ -127,20 +122,18 @@ namespace LawyerClass_Method
             CourthouseToAdd.Add("Truth or Consequences");
             CourthouseToAdd.Add("Cloudcroft");
             Console.WriteLine($"Start an array of thirteen New Mexico Courthouses:\n{CourthouseToAdd}");
-            Console.WriteLine($" the capacity of the combined list: {CourthouseToAdd}");
 
             return CourthouseToAdd;
-
         }
         public NM_CourthouseArray<string> RemoveCourthouse()
         {
             NM_CourthouseArray<string> CourthouseToRemove = new NM_CourthouseArray<string>();
-           
+
             CourthouseToRemove.Add("White Sands");
             CourthouseToRemove.Add("Truth or Consequences");
             CourthouseToRemove.Add("Cloudcroft");
             Console.WriteLine($"An array of three New Mexico Courthouses, for removal check:\n{CourthouseToRemove}");
-            
+
             Console.WriteLine($"\nfirst town is: {CourthouseToRemove.courthousesArray[0]}");
             Console.WriteLine($"second town is: {CourthouseToRemove.courthousesArray[1]}");
             Console.WriteLine($"third town is: {CourthouseToRemove.courthousesArray[2]}");

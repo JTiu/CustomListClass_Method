@@ -19,7 +19,7 @@ namespace LawyerClass_Method
             Console.WriteLine("1. User Story #1: Store & Add to Array");
             Console.WriteLine("2. User Story #2: Remove from Array");
             Console.WriteLine("3. User Story #3: Index Array");
-            Console.WriteLine("4. User Story #4: Capacity Property");
+            Console.WriteLine("4. User Story #4: Check Capacity & Count Property");
             Console.WriteLine("5. User Story #5");
             Console.WriteLine("6. User Story #6");
             Console.WriteLine("7. User Story #7");
@@ -46,7 +46,7 @@ namespace LawyerClass_Method
         public bool isValidEntry(string result)
         {
 
-            //This method will chck two things: 1) if th string can b pars to an int 2) if they entered an int - was the int 1-6 (EX: 15 is not a menu option)
+            //This method will check two things: 1) if th string can b pars to an int 2) if they entered an int - was the int 1-6 (EX: 15 is not a menu option)
             int number;
             bool isNumeric = int.TryParse(result, out number); //This is a method that checks if a string can be parsed into a int. EX: "2" - this would return TRUE, EX: "greg" this would return FALSE
 
@@ -98,7 +98,9 @@ namespace LawyerClass_Method
                     Console.ReadLine();
                     break;
                 case 6:
-
+                    NumericArray<int> NumericArrayToPrint = new NumericArray<int>();
+                    NumericArrayToPrint.CreateNumericRoute();
+                    Console.ReadLine();
                     break;
                 default:
                     break;

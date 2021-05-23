@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IntDataArrayLawOffices.cs" />
     <Compile Include="NM_CourthouseArray.cs" />
     <Compile Include="Lawyer.cs" />
     <Compile Include="LawyerMenu.cs" />
