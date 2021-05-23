@@ -157,6 +157,18 @@ namespace LawyerClass_Method
             Console.WriteLine($"\narray after removal of second & third towns {CourthouseToRemove}");
             return CourthouseToRemove;
         }
+        public T this[int index]//As a developer, story #4I want to create a C# indexer property so that I can make the objects in my list accessible via index.
+
+        {
+            get
+            {
+                if (index < 0 || index >= itemsInArray.Length) // I want to properly ensure that a user cannot access an out-of-bounds index. will use an 'if'
+                {
+                    throw new IndexOutOfRangeException();//will stop the 'run' and throw a written exception
+                }
+                return itemsInArray[index];
+            }
+        }
     }
 
 
