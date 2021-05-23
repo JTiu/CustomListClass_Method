@@ -14,8 +14,8 @@ namespace LawyerClass_Method
             Console.WriteLine("The Custom List Menu");
             Console.WriteLine("------------------------------------");
             Console.WriteLine();
-            Console.WriteLine("1. User Story #1: Create a Collection <T>, add a Collection of Courthouses (string), to the Array");
-            Console.WriteLine("2. User Story #2: Remove from Array");
+            Console.WriteLine("1. User Story #1: Create a Collection <T>, add string items to the Array");
+            Console.WriteLine("2. User Story #2: Remove items from a short array");
             Console.WriteLine("3. User Story #3: Index Array");
             Console.WriteLine("4. User Story #4: Check Capacity & Count Property");
             Console.WriteLine("5. User Story #5");
@@ -44,7 +44,6 @@ namespace LawyerClass_Method
         }
         public bool isValidEntry(string result)
         {
-
             //This method will check two things: 1) if th string can b pars to an int 2) if they entered an int - was the int 1-6 (EX: 15 is not a menu option)
             int number;
             bool isNumeric = int.TryParse(result, out number); //This is a method that checks if a string can be parsed into a int. EX: "2" - this would return TRUE, EX: "greg" this would return FALSE
@@ -67,13 +66,7 @@ namespace LawyerClass_Method
             CourthouseToAdd.Add("White Sands");
             CourthouseToAdd.Add("Truth or Consequences");
             CourthouseToAdd.Add("Cloudcroft");
-            Console.WriteLine($"Start an array of thirteen New Mexico Courthouses:\n{CourthouseToAdd}");
-
-            string secondTown = CourthouseToAdd[1];
-            Console.WriteLine($"\nsecond town is: {secondTown}");
-            CourthouseToAdd.Remove(secondTown);
-
-            Console.WriteLine($"\nlist after removal of second town {CourthouseToAdd.ToString()}");
+            Console.WriteLine($"Create an array, add thirteen items (New Mexico Courthouses):\n{CourthouseToAdd}");
             return CourthouseToAdd;
         }
         public void CreateNumericRoute()
@@ -92,7 +85,7 @@ namespace LawyerClass_Method
             CourthouseToAdd.Add(20);
             CourthouseToAdd.Add(21);
             CourthouseToAdd.Add(22);
-            Console.WriteLine($" An array of numerals: \n{CourthouseToAdd}");
+            Console.WriteLine($"Create an array, add 13 numerals: \n{CourthouseToAdd}");
         }
         public void CheckCapacityAndCount()
         {
@@ -142,10 +135,24 @@ namespace LawyerClass_Method
         }
         public void AnotherRemovalMethod()
         {
+            CustomList<string> CourthouseToAdd = new CustomList<string>();
+            CourthouseToAdd.Add("Las Cruces:  #1");
+            CourthouseToAdd.Add("Mesilla:     #2");
+            CourthouseToAdd.Add("Roswell:     #3");
+            CourthouseToAdd.Add("Albuquerque: #4");
+            CourthouseToAdd.Add("Santa Fe:    #5");
             
-            //Array.Add(23);
-            Console.WriteLine("your function here");
-            
+            Console.WriteLine($"A shorter array of New Mexico Courthouses, for removal method of two courthouses:\n{CourthouseToAdd}");
+
+            string secondTown = CourthouseToAdd[1];
+            string fourthTown = CourthouseToAdd[3];
+            Console.WriteLine($"\nsecond town is: {secondTown}\nfourth town is: {fourthTown}");
+            CourthouseToAdd.Remove(secondTown);
+            CourthouseToAdd.Remove(fourthTown);
+
+            Console.WriteLine($"\nlist, after removal of second town and fourth town:\n{CourthouseToAdd.ToString()}");
+            //return CourthouseToAdd;
+
         }
         public void OverloadingOperators()
         {
@@ -175,7 +182,7 @@ namespace LawyerClass_Method
                     break;
                 case 2:
                     CustomList<string> NM_CourthouseCollectionForRemoval = new CustomList<string>();
-                    NM_CourthouseCollectionForRemoval.RemoveCourthouse();
+                    NM_CourthouseCollectionForRemoval.RemoveCourthouseFromShortArray();
                     Console.ReadLine();
                     break;
                 case 3:

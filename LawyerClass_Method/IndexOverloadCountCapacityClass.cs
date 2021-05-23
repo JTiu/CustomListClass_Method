@@ -73,11 +73,11 @@ namespace LawyerClass_Method
         public TestPrintIndex<string> Index()
         {
             TestPrintIndex<string> AddToIndex = new TestPrintIndex<string>();
-            AddToIndex.Add("Las Cruces");
-            AddToIndex.Add("Mesilla");
-            AddToIndex.Add("Roswell");
+            AddToIndex.Add("Hobbs");
+            AddToIndex.Add("Rio Rancho");
+            AddToIndex.Add("Alamogordo");
 
-            Console.WriteLine($"An array of three New Mexico Courthouses, for index check:\n{AddToIndex}");
+            Console.WriteLine($"A different three item array for index check:\n{AddToIndex}");
             Console.WriteLine($"\nfirst town, by index is: {AddToIndex.arrayOfTowns1[0]}");
             Console.WriteLine($"second town, by index is: {AddToIndex.arrayOfTowns1[1]}");
             Console.WriteLine($"third town, by index is: {AddToIndex.arrayOfTowns1[2]}");

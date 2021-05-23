@@ -134,29 +134,28 @@ namespace LawyerClass_Method
             }
             return result;
         }
-        public CustomList<string> RemoveCourthouse()
+        public CustomList<string> RemoveCourthouseFromShortArray()
         {
            CustomList<string> CourthouseToRemove = new CustomList<string>();
 
             CourthouseToRemove.Add("White Sands");
             CourthouseToRemove.Add("Truth or Consequences");
             CourthouseToRemove.Add("Cloudcroft");
-            Console.WriteLine($"An array of three New Mexico Courthouses, for removal check:\n{CourthouseToRemove}");
+            Console.WriteLine($"A three item array, for removal check:\n{CourthouseToRemove}");
 
-            Console.WriteLine($"\nfirst town is: {CourthouseToRemove.itemsInArray[0]}");
-            Console.WriteLine($"second town is: {CourthouseToRemove.itemsInArray[1]}");
-            Console.WriteLine($"third town is: {CourthouseToRemove.itemsInArray[2]}");
+            Console.WriteLine($"\nfirst town is:   {CourthouseToRemove.itemsInArray[0]}");
+            Console.WriteLine($"second town is:  {CourthouseToRemove.itemsInArray[1]}");
+            Console.WriteLine($"third town is:   {CourthouseToRemove.itemsInArray[2]}");
 
             string secondTown = CourthouseToRemove.itemsInArray[1];
             string thirdTown = CourthouseToRemove.itemsInArray[2];
 
             CourthouseToRemove.Remove(secondTown);
             CourthouseToRemove.Remove(thirdTown);
-            Console.WriteLine($"\narray after removal of second & third towns {CourthouseToRemove}");
+            Console.WriteLine($"\nPrint the array remainder after removing second & third array items:\n{CourthouseToRemove}");
             return CourthouseToRemove;
         }
         public T this[int index]//As a developer, story #4I want to create a C# indexer property so that I can make the objects in my list accessible via index.
-
         {
             get
             {
