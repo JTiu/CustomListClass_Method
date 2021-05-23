@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LawyerClass_Method
 {
@@ -87,6 +83,18 @@ namespace LawyerClass_Method
             CourthouseToAdd.Add(22);
             Console.WriteLine($"Create an array, add 13 numerals: \n{CourthouseToAdd}");
         }
+        public void Index()
+        {
+            CustomList<string> AddToIndex = new CustomList<string>();
+            AddToIndex.Add("Hobbs");
+            AddToIndex.Add("Rio Rancho");
+            AddToIndex.Add("Alamogordo");
+
+            Console.WriteLine($"Do your indexing here: A different three item array for index check:\n{AddToIndex}");
+            Console.WriteLine($"\nfirst town, by index is: {AddToIndex[0]}");
+            //Console.WriteLine($"second town, by index is: {AddToIndex.arrayOfTowns1[1]}");
+            //Console.WriteLine($"third town, by index is: {AddToIndex.arrayOfTowns1[2]}");
+        }
         public void CheckCapacityAndCount()
         {
             CustomList<string> Array = new CustomList<string>();
@@ -141,7 +149,7 @@ namespace LawyerClass_Method
             CourthouseToAdd.Add("Roswell:     #3");
             CourthouseToAdd.Add("Albuquerque: #4");
             CourthouseToAdd.Add("Santa Fe:    #5");
-            
+
             Console.WriteLine($"A shorter array of New Mexico Courthouses, for removal method of two courthouses:\n{CourthouseToAdd}");
 
             string secondTown = CourthouseToAdd[1];
@@ -156,7 +164,7 @@ namespace LawyerClass_Method
         }
         public void OverloadingOperators()
         {
-           CustomList <string> firstArrayForOverload = new CustomList<string>();
+            CustomList<string> firstArrayForOverload = new CustomList<string>();
             firstArrayForOverload.Add("Las Cruces");
             firstArrayForOverload.Add("Mesilla");
             firstArrayForOverload.Add("Roswell");
@@ -186,9 +194,8 @@ namespace LawyerClass_Method
                     Console.ReadLine();
                     break;
                 case 3:
-                    TestPrintIndex<string> PrintFromIndex = new TestPrintIndex<string>();
-                    PrintFromIndex.Index();
-                    Console.ReadLine(); 
+                    Index();
+                    Console.ReadLine();
                     break;
                 case 4:
                     CheckCapacityAndCount();

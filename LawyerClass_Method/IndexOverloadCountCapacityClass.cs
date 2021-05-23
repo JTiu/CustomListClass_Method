@@ -70,20 +70,7 @@ namespace LawyerClass_Method
             }
             return result;
         }
-        public TestPrintIndex<string> Index()
-        {
-            TestPrintIndex<string> AddToIndex = new TestPrintIndex<string>();
-            AddToIndex.Add("Hobbs");
-            AddToIndex.Add("Rio Rancho");
-            AddToIndex.Add("Alamogordo");
-
-            Console.WriteLine($"A different three item array for index check:\n{AddToIndex}");
-            Console.WriteLine($"\nfirst town, by index is: {AddToIndex.arrayOfTowns1[0]}");
-            Console.WriteLine($"second town, by index is: {AddToIndex.arrayOfTowns1[1]}");
-            Console.WriteLine($"third town, by index is: {AddToIndex.arrayOfTowns1[2]}");
-
-            return AddToIndex;
-        }
+       
        
         
 
