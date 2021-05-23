@@ -90,46 +90,22 @@ namespace LawyerClass_Method
             }
             return result;
         }
-        public TestPrintIndex<string> CreateShortRoute()
+        public TestPrintIndex<string> Index()
         {
-            TestPrintIndex<string> NM_RouteToAdd = new TestPrintIndex<string>();
-            NM_RouteToAdd.Add("Las Cruces");
-            NM_RouteToAdd.Add("Mesilla");
-            NM_RouteToAdd.Add("Roswell");
-            //NM_RouteToAdd.Add("Albuquerque");
-            //NM_RouteToAdd.Add("Santa Fe");
-            //NM_RouteToAdd.Add("Rio Rancho");
-            //NM_RouteToAdd.Add("Hobbs");
-            //NM_RouteToAdd.Add("Alamogordo");
-            //NM_RouteToAdd.Add("Farmington");
-            //NM_RouteToAdd.Add("Clovis");
-            //NM_RouteToAdd.Add("White Sands");
-            //NM_RouteToAdd.Add("Truth or Consequences");
-            //NM_RouteToAdd.Add("Cloudcroft");
-            Console.WriteLine($"\nA collection of three New Mexico Courthouses, check index:\n{NM_RouteToAdd}");
-            Console.WriteLine($"\nfirst town, by index is: {NM_RouteToAdd.stopsOnRoute[0]}");
-            Console.WriteLine($"second town, by index is: {NM_RouteToAdd.stopsOnRoute[1]}");
-            Console.WriteLine($"third town, by index is: {NM_RouteToAdd.stopsOnRoute[2]}");
+            TestPrintIndex<string> AddToIndex = new TestPrintIndex<string>();
+            AddToIndex.Add("Las Cruces");
+            AddToIndex.Add("Mesilla");
+            AddToIndex.Add("Roswell");
 
-            return NM_RouteToAdd;
+            Console.WriteLine($"A collection of three New Mexico Courthouses, for index check:\n{AddToIndex}");
+            Console.WriteLine($"\nfirst town, by index is: {AddToIndex.stopsOnRoute[0]}");
+            Console.WriteLine($"second town, by index is: {AddToIndex.stopsOnRoute[1]}");
+            Console.WriteLine($"third town, by index is: {AddToIndex.stopsOnRoute[2]}");
+
+            return AddToIndex;
 
         }
-        public TestPrintIndex<string> CreateRemovalRoute()
-        {
-            TestPrintIndex<string> NM_RouteToAdd = new TestPrintIndex<string>();
-            NM_RouteToAdd.Add("Las Cruces");
-            NM_RouteToAdd.Add("Mesilla");
-            NM_RouteToAdd.Add("Roswell");
-            NM_RouteToAdd.Add("Albuquerque");
-            NM_RouteToAdd.Add("Santa Fe");
-            NM_RouteToAdd.Add("White Sands");
-            NM_RouteToAdd.Add("Truth or Consequences");
-            NM_RouteToAdd.Add("Cloudcroft");
-            Console.WriteLine($"A collection of eight New Mexico Courthouses, for removal:\n{NM_RouteToAdd}");
-
-            return NM_RouteToAdd;
-
-        }
+        
     }
 
 

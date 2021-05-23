@@ -78,15 +78,15 @@ namespace LawyerClass_Method
                     Console.ReadLine();
                     break;
                 case 2:
-                    CourthouseRoute<string> NM_RouteCourthouseToDoSomethingElse = new CourthouseRoute<string>();
-                    NM_RouteCourthouseToDoSomethingElse.CreateRemovalRoute();
+                    CourthouseRoute<string> NM_CourthouseCollectionForRemoval = new CourthouseRoute<string>();
+                    NM_CourthouseCollectionForRemoval.RemoveCourthouse();
                     Console.ReadLine();
                     break;
                 case 3:
                     TestPrintIndex<string> PrintFromIndex = new TestPrintIndex<string>();
-                    PrintFromIndex.CreateShortRoute();
+                    PrintFromIndex.Index();
                     Console.ReadLine(); 
-                    //switchCaseObject3.CreateClassObject3();
+                   
                     break;
                 case 4:
 
