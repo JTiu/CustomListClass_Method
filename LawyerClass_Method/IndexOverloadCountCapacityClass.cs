@@ -66,7 +66,6 @@ namespace LawyerClass_Method
                 if (item != null)
                 {
                     result += "\nadd, to array: "; result += item.ToString();
-
                 }
             }
             return result;

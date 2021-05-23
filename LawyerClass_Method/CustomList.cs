@@ -43,7 +43,6 @@ namespace LawyerClass_Method
         public void Add(T item) //does not return, so 'void' because will always be able to add a new value by 3 step process to double the capacvity if array is full. 
                                 //Remove method will return a bool to indicate t/f if removal method is successful
         {
-
             int findIndex = FindNullIndexToAdd(); //method to find next open position
             if (findIndex >= 0)
             {
@@ -131,14 +130,13 @@ namespace LawyerClass_Method
                 {
                     result += "\nadd, to courthouseArray: "; 
                     result += item.ToString();
-
                 }
             }
             return result;
         }
         public CustomList<string> RemoveCourthouse()
         {
-            CustomList<string> CourthouseToRemove = new CustomList<string>();
+           CustomList<string> CourthouseToRemove = new CustomList<string>();
 
             CourthouseToRemove.Add("White Sands");
             CourthouseToRemove.Add("Truth or Consequences");

@@ -11,16 +11,17 @@ namespace LawyerClass_Method
         //Methods
         public int DrawMenu()  //going to draw my menu of choices, contestant, sweep, winner
         {
-            Console.WriteLine("The New Mexico Lawyer Menu");
+            Console.WriteLine("The Custom List Menu");
             Console.WriteLine("------------------------------------");
             Console.WriteLine();
-            Console.WriteLine("1. User Story #1: Store & Add to Array");
+            Console.WriteLine("1. User Story #1: Create a Collection <T>, add a Collection of Courthouses (string), to the Array");
             Console.WriteLine("2. User Story #2: Remove from Array");
             Console.WriteLine("3. User Story #3: Index Array");
             Console.WriteLine("4. User Story #4: Check Capacity & Count Property");
             Console.WriteLine("5. User Story #5");
             Console.WriteLine("6. User Story #6 Testin whether <T> accepts Ints");
             Console.WriteLine("7. User Story #7: check Numeric Count & Capacity");
+            Console.WriteLine("8. User Story #8: Another Removal Method");
 
             bool invalidEntry = true; //this bool insures that an invalid entry is not entered
             string result = "";
@@ -49,6 +50,7 @@ namespace LawyerClass_Method
             bool isNumeric = int.TryParse(result, out number); //This is a method that checks if a string can be parsed into a int. EX: "2" - this would return TRUE, EX: "greg" this would return FALSE
             return isNumeric;
         }
+
         public CustomList<string> CreateRoute()
         {
             CustomList<string> CourthouseToAdd = new CustomList<string>();
@@ -67,6 +69,11 @@ namespace LawyerClass_Method
             CourthouseToAdd.Add("Cloudcroft");
             Console.WriteLine($"Start an array of thirteen New Mexico Courthouses:\n{CourthouseToAdd}");
 
+            string secondTown = CourthouseToAdd[1];
+            Console.WriteLine($"\nsecond town is: {secondTown}");
+            CourthouseToAdd.Remove(secondTown);
+
+            Console.WriteLine($"\nlist after removal of second town {CourthouseToAdd.ToString()}");
             return CourthouseToAdd;
         }
         public void CreateNumericRoute()
@@ -109,7 +116,6 @@ namespace LawyerClass_Method
             Console.WriteLine($"\nA new array of Courthouses, for capacity check:\n{Array}");
             Console.WriteLine($"\nNow, capacity is: {Array.Capacity}");
             Console.WriteLine($"\nNow, count is: {Array.Count}");
-           
         }
         public void CheckCapacityAndCountOfNumeric()
         {
@@ -133,7 +139,13 @@ namespace LawyerClass_Method
             Console.WriteLine($"\nA new array of Courthouses, for capacity check:\n{Array}");
             Console.WriteLine($"\nNow, capacity is: {Array.Capacity}");
             Console.WriteLine($"\nNow, count is: {Array.Count}");
-
+        }
+        public void AnotherRemovalMethod()
+        {
+            
+            //Array.Add(23);
+            Console.WriteLine("your function here");
+            
         }
         public void OverloadingOperators()
         {
@@ -150,7 +162,6 @@ namespace LawyerClass_Method
 
             Console.WriteLine($"\nAn array, for capacity check:\n{secondArrayForOverload}, capacity: {secondArrayForOverload.Capacity}");
             Console.WriteLine($"\ncountcheck:\n{firstArrayForOverload.Count}");
-           
         }
         public void DirectUser(int option)
         {
@@ -186,6 +197,10 @@ namespace LawyerClass_Method
                     break;
                 case 7:
                     CheckCapacityAndCountOfNumeric();
+                    Console.ReadLine();
+                    break;
+                case 8:
+                    AnotherRemovalMethod();
                     Console.ReadLine();
                     break;
                 default:
