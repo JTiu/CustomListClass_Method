@@ -5,36 +5,7 @@ namespace LawyerClass_Method
     public class TestPrintIndex<T>
     {
         private T[] arrayOfTowns1; //array indicated by the T[], followed by name, need a constructor
-        public int Capacity ////As a developer, I want a #3 Capacity: How many? ten.
-        {
-            get
-            {
-                return arrayOfTowns1.Length;
-            }
-
-        }
-        public int Count //Enter array, determine how many positions
-        {
-            get
-            {
-                int count = 0; //start at 0 position
-
-                foreach (var item in arrayOfTowns1) //Loop thru items, each item, if not null, add item to count// for each loop does not care about index postion
-                {
-                    if (item != null)
-                    {
-                        count++;
-
-                    }
-                    else
-                    {
-                        return count;
-                    }
-                }
-                return count; //array is full. until anything is added, count is zero
-            }
-
-        }
+        
         //public CourthouseRoute(string a, string b, string c, string d, string e, string f, string g, string h, string j, string k, string l, string m)
         public TestPrintIndex()//initializes the array with length of 10 items. Meets user story#1 
         //    //As a developer, I want to use a custom-built list class that stores its values in an array, so that I can store any data type in my collection.
@@ -114,48 +85,8 @@ namespace LawyerClass_Method
 
             return AddToIndex;
         }
-        public TestPrintIndex<string> CheckCapacityAndCount()
-        {
-            TestPrintIndex<string> Array = new TestPrintIndex<string>();
-            Array.Add("Las Cruces");
-            Array.Add("Mesilla");
-            Array.Add("Roswell");
-
-            Console.WriteLine($"An array of three New Mexico Courthouses, for capacity & count check:\n{Array}");
-            Console.WriteLine($"\nCapacity is: {Array.Capacity}, Count is: {Array.Count}");
-            Array.Add("Albuquerque");
-            Array.Add("Santa Fe");
-            Array.Add("Rio Rancho");
-            Array.Add("Hobbs");
-            Array.Add("Alamogordo");
-            Array.Add("Farmington");
-            Array.Add("Clovis");
-            Array.Add("White Sands");
-            Array.Add("Truth or Consequences");
-            Array.Add("Cloudcroft");
-            Console.WriteLine($"\nA new array of Courthouses, for capacity check:\n{Array}");
-            Console.WriteLine($"\nNow, capacity is: {Array.Capacity}");
-            Console.WriteLine($"\nNow, count is: {Array.Count}");
-            return Array;
-        }
-        public TestPrintIndex<string> OverloadingOperators()
-        {
-            TestPrintIndex<string> firstArrayForOverload = new TestPrintIndex<string>();
-            firstArrayForOverload.Add("Las Cruces");
-            firstArrayForOverload.Add("Mesilla");
-            firstArrayForOverload.Add("Roswell");
-            Console.WriteLine($"\nAn array, for capacity check:\n{firstArrayForOverload}, capacity: {firstArrayForOverload.Capacity}");
-            Console.WriteLine($"\ncountcheck:\n{firstArrayForOverload.Count}");
-            TestPrintIndex<string> secondArrayForOverload = new TestPrintIndex<string>();
-            secondArrayForOverload.Add("El Paso");
-            secondArrayForOverload.Add("Amarillo");
-            secondArrayForOverload.Add("Fort Worth");
-            
-            Console.WriteLine($"\nAn array, for capacity check:\n{secondArrayForOverload}, capacity: {secondArrayForOverload.Capacity}");
-            Console.WriteLine($"\ncountcheck:\n{firstArrayForOverload.Count}");
-            return firstArrayForOverload;
-            return secondArrayForOverload;
-        }
+       
+        
 
     }
 

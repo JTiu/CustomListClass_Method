@@ -10,7 +10,7 @@ namespace LawyerClass_Method
             int optionPicked;
             optionPicked = startMenu.DrawMenu(); //
 
-            while (optionPicked != 7)
+            while (optionPicked != 10)
             {
                 Console.Clear();
                 startMenu.DirectUser(optionPicked);

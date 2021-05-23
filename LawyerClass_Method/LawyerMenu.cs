@@ -21,8 +21,8 @@ namespace LawyerClass_Method
             Console.WriteLine("3. User Story #3: Index Array");
             Console.WriteLine("4. User Story #4: Check Capacity & Count Property");
             Console.WriteLine("5. User Story #5");
-            Console.WriteLine("6. User Story #6");
-            Console.WriteLine("7. User Story #7");
+            Console.WriteLine("6. User Story #6 Testin whether <T> accepts Ints");
+            Console.WriteLine("7. User Story #7: check Numeric Count & Capacity");
 
             bool invalidEntry = true; //this bool insures that an invalid entry is not entered
             string result = "";
@@ -49,22 +49,110 @@ namespace LawyerClass_Method
             //This method will check two things: 1) if th string can b pars to an int 2) if they entered an int - was the int 1-6 (EX: 15 is not a menu option)
             int number;
             bool isNumeric = int.TryParse(result, out number); //This is a method that checks if a string can be parsed into a int. EX: "2" - this would return TRUE, EX: "greg" this would return FALSE
+            return isNumeric;
+        }
+        public NM_CourthouseArray<string> CreateRoute()
+        {
+            NM_CourthouseArray<string> CourthouseToAdd = new NM_CourthouseArray<string>();
+            CourthouseToAdd.Add("Las Cruces");
+            CourthouseToAdd.Add("Mesilla");
+            CourthouseToAdd.Add("Roswell");
+            CourthouseToAdd.Add("Albuquerque");
+            CourthouseToAdd.Add("Santa Fe");
+            CourthouseToAdd.Add("Rio Rancho");
+            CourthouseToAdd.Add("Hobbs");
+            CourthouseToAdd.Add("Alamogordo");
+            CourthouseToAdd.Add("Farmington");
+            CourthouseToAdd.Add("Clovis");
+            CourthouseToAdd.Add("White Sands");
+            CourthouseToAdd.Add("Truth or Consequences");
+            CourthouseToAdd.Add("Cloudcroft");
+            Console.WriteLine($"Start an array of thirteen New Mexico Courthouses:\n{CourthouseToAdd}");
 
-            if (isNumeric == true)
-            {
-                if (number < 8 && number > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
+            return CourthouseToAdd;
+        }
+        public void CreateNumericRoute()
+        {
+            NM_CourthouseArray<int> CourthouseToAdd = new NM_CourthouseArray<int>();
+            CourthouseToAdd.Add(11);
+            CourthouseToAdd.Add(12);
+            CourthouseToAdd.Add(13);
+            CourthouseToAdd.Add(14);
+            CourthouseToAdd.Add(14);
+            CourthouseToAdd.Add(15);
+            CourthouseToAdd.Add(16);
+            CourthouseToAdd.Add(17);
+            CourthouseToAdd.Add(18);
+            CourthouseToAdd.Add(19);
+            CourthouseToAdd.Add(20);
+            CourthouseToAdd.Add(21);
+            CourthouseToAdd.Add(22);
+            Console.WriteLine($" An array of numerals: \n{CourthouseToAdd}");
+        }
+        public void CheckCapacityAndCount()
+        {
+            NM_CourthouseArray<string> Array = new NM_CourthouseArray<string>();
+            Array.Add("Las Cruces");
+            Array.Add("Mesilla");
+            Array.Add("Roswell");
+
+            Console.WriteLine($"An array of three New Mexico Courthouses, for capacity & count check:\n{Array}");
+            Console.WriteLine($"\nCapacity is: {Array.Capacity}, Count is: {Array.Count}");
+            Array.Add("Albuquerque");
+            Array.Add("Santa Fe");
+            Array.Add("Rio Rancho");
+            Array.Add("Hobbs");
+            Array.Add("Alamogordo");
+            Array.Add("Farmington");
+            Array.Add("Clovis");
+            Array.Add("White Sands");
+            Array.Add("Truth or Consequences");
+            Array.Add("Cloudcroft");
+            Console.WriteLine($"\nA new array of Courthouses, for capacity check:\n{Array}");
+            Console.WriteLine($"\nNow, capacity is: {Array.Capacity}");
+            Console.WriteLine($"\nNow, count is: {Array.Count}");
+           
+        }
+        public void CheckCapacityAndCountOfNumeric()
+        {
+            NM_CourthouseArray<int> Array = new NM_CourthouseArray<int>();
+            Array.Add(11);
+            Array.Add(12);
+            Array.Add(13);
+
+            Console.WriteLine($"An array of three New Mexico Courthouses, for capacity & count check:\n{Array}");
+            Console.WriteLine($"\nCapacity is: {Array.Capacity}, Count is: {Array.Count}");
+            Array.Add(14);
+            Array.Add(15);
+            Array.Add(16);
+            Array.Add(17);
+            Array.Add(18);
+            Array.Add(19);
+            Array.Add(20);
+            Array.Add(21);
+            //Array.Add(22);
+            //Array.Add(23);
+            Console.WriteLine($"\nA new array of Courthouses, for capacity check:\n{Array}");
+            Console.WriteLine($"\nNow, capacity is: {Array.Capacity}");
+            Console.WriteLine($"\nNow, count is: {Array.Count}");
+
+        }
+        public void OverloadingOperators()
+        {
+           NM_CourthouseArray <string> firstArrayForOverload = new NM_CourthouseArray<string>();
+            firstArrayForOverload.Add("Las Cruces");
+            firstArrayForOverload.Add("Mesilla");
+            firstArrayForOverload.Add("Roswell");
+            Console.WriteLine($"\nAn array, for capacity check:\n{firstArrayForOverload}, capacity: {firstArrayForOverload.Capacity}");
+            Console.WriteLine($"\ncountcheck:\n{firstArrayForOverload.Count}");
+            NM_CourthouseArray<string> secondArrayForOverload = new NM_CourthouseArray<string>();
+            secondArrayForOverload.Add("El Paso");
+            secondArrayForOverload.Add("Amarillo");
+            secondArrayForOverload.Add("Fort Worth");
+
+            Console.WriteLine($"\nAn array, for capacity check:\n{secondArrayForOverload}, capacity: {secondArrayForOverload.Capacity}");
+            Console.WriteLine($"\ncountcheck:\n{firstArrayForOverload.Count}");
+           
         }
         public void DirectUser(int option)
         {
@@ -73,8 +161,7 @@ namespace LawyerClass_Method
             switch (option)
             {
                 case 1:
-                    NM_CourthouseArray<string> NM_RouteCourthouseToPrint = new NM_CourthouseArray<string>();
-                    NM_RouteCourthouseToPrint.CreateRoute();
+                    CreateRoute();
                     Console.ReadLine();
                     break;
                 case 2:
@@ -88,21 +175,23 @@ namespace LawyerClass_Method
                     Console.ReadLine(); 
                     break;
                 case 4:
-                    TestPrintIndex<string> PrintCapacity = new TestPrintIndex<string>();
-                    PrintCapacity.CheckCapacityAndCount();
+                    CheckCapacityAndCount();
                     Console.ReadLine();
                     break;
                 case 5:
-                    TestPrintIndex<string> overload = new TestPrintIndex<string>();
-                    overload.OverloadingOperators();
+                    OverloadingOperators();
                     Console.ReadLine();
                     break;
                 case 6:
-                    NumericArray<int> NumericArrayToPrint = new NumericArray<int>();
-                    NumericArrayToPrint.CreateNumericRoute();
+                    CreateNumericRoute();
+                    Console.ReadLine();
+                    break;
+                case 7:
+                    CheckCapacityAndCountOfNumeric();
                     Console.ReadLine();
                     break;
                 default:
+                    Console.WriteLine("Entry was incorrect, please enter a number as listed above");
                     break;
             }
         }

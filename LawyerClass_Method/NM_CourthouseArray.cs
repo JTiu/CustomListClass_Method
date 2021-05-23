@@ -6,12 +6,38 @@ namespace LawyerClass_Method
     {
         private T[] courthousesArray; //array indicated by the T[], followed by name, need a constructor
 
+        public int Capacity ////As a developer, I want a #3 Capacity: How many? ten.
+        {
+            get
+            {
+                return courthousesArray.Length;
+            }
+        }
+        public int Count //Enter array, determine how many positions
+        {
+            get
+            {
+                int count = 0; //start at 0 position
+
+                foreach (var item in courthousesArray) //Loop thru items, each item, if not null, add item to count// for each loop does not care about index postion
+                {
+                    if (item != null && !item.Equals(default (T)))
+                    {
+                        count++;
+                    }
+                    else
+                    {
+                        return count;
+                    }
+                }
+                return count; //array is full. until anything is added, count is zero
+            }
+        }
         public NM_CourthouseArray()//initializes the array with length of 10 items. Meets user story#1 
         //    //As a developer, I want to use a custom-built list class that stores its values in an array, so that I can store any data type in my collection.
         //    //capacity is ten at this moment
         {
             courthousesArray = new T[10];
-
         }
 
         public void Add(T item) //does not return, so 'void' because will always be able to add a new value by 3 step process to double the capacvity if array is full. 
@@ -48,10 +74,15 @@ namespace LawyerClass_Method
         {
             for (int i = 0; i < courthousesArray.Length; i++)
             {
-                if (courthousesArray[i] == null)//check with ==
+                if (courthousesArray[i] == null)//check with == testing revealed issue when trying to change the index with an 'int'*/
                 {
                     return i;//returns the next open slot.  if initial add, goeos to [0], subsequent additions go to next available slot, up to length-1; when full , will have a different result
                 }
+                if (courthousesArray[i].Equals(default(T))) /*/null)//check with == testing revealed issue when trying to change the index with an 'int'*/
+                {
+                    return i;//returns the next open slot.  if initial add, goeos to [0], subsequent additions go to next available slot, up to length-1; when full , will have a different result
+                }
+
             }
             return -1;//-1 will indicate that there are no null postions to fill, array is full (ten)
         }
@@ -99,32 +130,15 @@ namespace LawyerClass_Method
             {
                 if (item != null)
                 {
-                    result += "\nadd, to courthouseArray: "; result += item.ToString();
+                    result += "\nadd, to courthouseArray: "; 
+                    result += item.ToString();
 
                 }
             }
             return result;
         }
-        public NM_CourthouseArray<string> CreateRoute()
-        {
-            NM_CourthouseArray<string> CourthouseToAdd = new NM_CourthouseArray<string>();
-            CourthouseToAdd.Add("Las Cruces");
-            CourthouseToAdd.Add("Mesilla");
-            CourthouseToAdd.Add("Roswell");
-            CourthouseToAdd.Add("Albuquerque");
-            CourthouseToAdd.Add("Santa Fe");
-            CourthouseToAdd.Add("Rio Rancho");
-            CourthouseToAdd.Add("Hobbs");
-            CourthouseToAdd.Add("Alamogordo");
-            CourthouseToAdd.Add("Farmington");
-            CourthouseToAdd.Add("Clovis");
-            CourthouseToAdd.Add("White Sands");
-            CourthouseToAdd.Add("Truth or Consequences");
-            CourthouseToAdd.Add("Cloudcroft");
-            Console.WriteLine($"Start an array of thirteen New Mexico Courthouses:\n{CourthouseToAdd}");
-
-            return CourthouseToAdd;
-        }
+        
+        
         public NM_CourthouseArray<string> RemoveCourthouse()
         {
             NM_CourthouseArray<string> CourthouseToRemove = new NM_CourthouseArray<string>();
