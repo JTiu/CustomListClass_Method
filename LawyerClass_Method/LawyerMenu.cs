@@ -115,7 +115,7 @@ namespace LawyerClass_Method
             Array.Add("Truth or Consequences");
             Array.Add("Cloudcroft");
             Console.WriteLine($"\nAdd ten more items to existing array, then check capacity & count:\n{Array}");
-            Console.WriteLine($"\nCapacity is: {Array.Capacity} Count is: {Array.Count}");
+            Console.WriteLine($"\nCapacity is: {Array.Capacity}, Count is: {Array.Count}");
         }
         public void CheckCapacityAndCountOfNumeric()
         {
@@ -163,6 +163,7 @@ namespace LawyerClass_Method
         }
         public void OverloadingOperators()
         {
+            Console.WriteLine("Do some overloading here");
             CustomList<string> firstArrayForOverload = new CustomList<string>();
             firstArrayForOverload.Add("Las Cruces");
             firstArrayForOverload.Add("Mesilla");
