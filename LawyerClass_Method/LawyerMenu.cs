@@ -91,9 +91,9 @@ namespace LawyerClass_Method
             AddToIndex.Add("Alamogordo");
 
             Console.WriteLine($"Do your indexing here: A different three item array for index check:\n{AddToIndex}");
-            Console.WriteLine($"\nfirst town, by index is: {AddToIndex[0]}");
-            //Console.WriteLine($"second town, by index is: {AddToIndex.arrayOfTowns1[1]}");
-            //Console.WriteLine($"third town, by index is: {AddToIndex.arrayOfTowns1[2]}");
+            Console.WriteLine($"\nfirst town, index[0]:   {AddToIndex[0]}");
+            Console.WriteLine($"second town, index[1]:  {AddToIndex[1]}");
+            Console.WriteLine($"third town, index[2]:   {AddToIndex[2]}");
         }
         public void CheckCapacityAndCount()
         {
@@ -101,9 +101,9 @@ namespace LawyerClass_Method
             Array.Add("Las Cruces");
             Array.Add("Mesilla");
             Array.Add("Roswell");
-
-            Console.WriteLine($"An array of three New Mexico Courthouses, for capacity & count check:\n{Array}");
+            Console.WriteLine($"A three item array, for capacity & count check:\n{Array}");
             Console.WriteLine($"\nCapacity is: {Array.Capacity}, Count is: {Array.Count}");
+
             Array.Add("Albuquerque");
             Array.Add("Santa Fe");
             Array.Add("Rio Rancho");
@@ -114,9 +114,8 @@ namespace LawyerClass_Method
             Array.Add("White Sands");
             Array.Add("Truth or Consequences");
             Array.Add("Cloudcroft");
-            Console.WriteLine($"\nA new array of Courthouses, for capacity check:\n{Array}");
-            Console.WriteLine($"\nNow, capacity is: {Array.Capacity}");
-            Console.WriteLine($"\nNow, count is: {Array.Count}");
+            Console.WriteLine($"\nAdd ten more items to existing array, then check capacity & count:\n{Array}");
+            Console.WriteLine($"\nCapacity is: {Array.Capacity} Count is: {Array.Count}");
         }
         public void CheckCapacityAndCountOfNumeric()
         {
