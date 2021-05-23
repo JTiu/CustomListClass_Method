@@ -8,9 +8,7 @@ namespace LawyerClass_Method
 {
     public class Menu
     {
-
         //Methods
-
         public int DrawMenu()  //going to draw my menu of choices, contestant, sweep, winner
         {
             Console.WriteLine("The New Mexico Lawyer Menu");
@@ -51,9 +49,9 @@ namespace LawyerClass_Method
             bool isNumeric = int.TryParse(result, out number); //This is a method that checks if a string can be parsed into a int. EX: "2" - this would return TRUE, EX: "greg" this would return FALSE
             return isNumeric;
         }
-        public NM_CourthouseArray<string> CreateRoute()
+        public CustomList<string> CreateRoute()
         {
-            NM_CourthouseArray<string> CourthouseToAdd = new NM_CourthouseArray<string>();
+            CustomList<string> CourthouseToAdd = new CustomList<string>();
             CourthouseToAdd.Add("Las Cruces");
             CourthouseToAdd.Add("Mesilla");
             CourthouseToAdd.Add("Roswell");
@@ -73,7 +71,7 @@ namespace LawyerClass_Method
         }
         public void CreateNumericRoute()
         {
-            NM_CourthouseArray<int> CourthouseToAdd = new NM_CourthouseArray<int>();
+            CustomList<int> CourthouseToAdd = new CustomList<int>();
             CourthouseToAdd.Add(11);
             CourthouseToAdd.Add(12);
             CourthouseToAdd.Add(13);
@@ -91,7 +89,7 @@ namespace LawyerClass_Method
         }
         public void CheckCapacityAndCount()
         {
-            NM_CourthouseArray<string> Array = new NM_CourthouseArray<string>();
+            CustomList<string> Array = new CustomList<string>();
             Array.Add("Las Cruces");
             Array.Add("Mesilla");
             Array.Add("Roswell");
@@ -115,7 +113,7 @@ namespace LawyerClass_Method
         }
         public void CheckCapacityAndCountOfNumeric()
         {
-            NM_CourthouseArray<int> Array = new NM_CourthouseArray<int>();
+            CustomList<int> Array = new CustomList<int>();
             Array.Add(11);
             Array.Add(12);
             Array.Add(13);
@@ -139,13 +137,13 @@ namespace LawyerClass_Method
         }
         public void OverloadingOperators()
         {
-           NM_CourthouseArray <string> firstArrayForOverload = new NM_CourthouseArray<string>();
+           CustomList <string> firstArrayForOverload = new CustomList<string>();
             firstArrayForOverload.Add("Las Cruces");
             firstArrayForOverload.Add("Mesilla");
             firstArrayForOverload.Add("Roswell");
             Console.WriteLine($"\nAn array, for capacity check:\n{firstArrayForOverload}, capacity: {firstArrayForOverload.Capacity}");
             Console.WriteLine($"\ncountcheck:\n{firstArrayForOverload.Count}");
-            NM_CourthouseArray<string> secondArrayForOverload = new NM_CourthouseArray<string>();
+            CustomList<string> secondArrayForOverload = new CustomList<string>();
             secondArrayForOverload.Add("El Paso");
             secondArrayForOverload.Add("Amarillo");
             secondArrayForOverload.Add("Fort Worth");
@@ -165,7 +163,7 @@ namespace LawyerClass_Method
                     Console.ReadLine();
                     break;
                 case 2:
-                    NM_CourthouseArray<string> NM_CourthouseCollectionForRemoval = new NM_CourthouseArray<string>();
+                    CustomList<string> NM_CourthouseCollectionForRemoval = new CustomList<string>();
                     NM_CourthouseCollectionForRemoval.RemoveCourthouse();
                     Console.ReadLine();
                     break;
