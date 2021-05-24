@@ -100,6 +100,7 @@ namespace LawyerClassMethod_Testing
             Assert.IsTrue(result);
         }
         [TestMethod]
+        //[ExpectedException]//need to google this
         public void Remove_ShouldReturnFalse_IfItemDoesNotExistInList()//naming convbention 'method, underscore, expected result. as third item needed, add an extra underscore. 
         { //arrange
             CustomList<string> listOfTowns = new CustomList<string>();//empty list
@@ -111,7 +112,7 @@ namespace LawyerClassMethod_Testing
             //Assert
 
             Assert.IsFalse(result);
+
         }
     }
 }
-
