@@ -47,7 +47,7 @@ namespace LawyerClass_Method
             return isNumeric;
         }
 
-        public CustomList<string> CreateRoute()
+        public CustomList<string> CreateArray()
         {
             CustomList<string> CourthouseToAdd = new CustomList<string>();
             CourthouseToAdd.Add("Las Cruces");
@@ -202,10 +202,10 @@ namespace LawyerClass_Method
             switch (option)
             {
                 case 1:
-                    CreateRoute();
+                    CreateArray();
                     Console.ReadLine();
                     break;
-                case 2:
+                case 2://next three lines left for testing purposes
                     CustomList<string> NM_CourthouseCollectionForRemoval = new CustomList<string>();
                     NM_CourthouseCollectionForRemoval.RemoveCourthouseFromShortArray();
                     Console.ReadLine();
