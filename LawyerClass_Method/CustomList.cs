@@ -130,7 +130,7 @@ namespace LawyerClass_Method
             {
                 if (item != null)
                 {
-                    result += "\nadd, to courthouseArray: "; 
+                    result += "\nto Array: "; 
                     result += item.ToString();
                 }
             }

@@ -18,7 +18,8 @@ namespace LawyerClass_Method
             Console.WriteLine("6. User Story #6  Using collection <T> for Ints");
             Console.WriteLine("7. User Story #7: Check Numeric Count & Capacity");
             Console.WriteLine("8. User Story #8: Another Removal Method");
-            Console.WriteLine("9. User Story #9: zip");
+            Console.WriteLine("9. User Story #9: Zip on Custom List");
+            Console.WriteLine("10. User Story #10: Sort a Custom List");
 
             bool invalidEntry = true; //this bool insures that an invalid entry is not entered
             string result = "";
@@ -126,7 +127,7 @@ namespace LawyerClass_Method
             Array.Add(12);
             Array.Add(13);
 
-            Console.WriteLine($"An array of three items, for capacity & count check:\n{Array}");
+            Console.WriteLine($"Three-item array, check numeric array capacity & count:\n{Array}");
             Console.WriteLine($"\nCapacity is: {Array.Capacity}, Count is: {Array.Count}");
             Array.Add(14);
             Array.Add(15);
@@ -137,7 +138,7 @@ namespace LawyerClass_Method
             Array.Add(20);
             Array.Add(21);
 
-            Console.WriteLine($"\nA new array of items, for capacity check:\n{Array}");
+            Console.WriteLine($"\nAdd numerals, re-print array, check new capacity and count:\n{Array}");
             Console.WriteLine($"\nNow, capacity is: {Array.Capacity}");
             Console.WriteLine($"\nNow, count is: {Array.Count}");
         }
@@ -239,26 +240,39 @@ namespace LawyerClass_Method
                     aList.Add(1);
                     aList.Add(3);
                     aList.Add(5);
+                    aList.Add(7);
+                    aList.Add(9);
+                    
                     CustomList<int> bList = new CustomList<int>();
                     bList.Add(2);
                     bList.Add(4);
                     bList.Add(6);
+                    bList.Add(8);
+                    bList.Add(10);
                     CustomList<int> zList = aList.ZipMethod(bList);
-                    Console.WriteLine(aList);
-                    Console.WriteLine(bList);
-                    Console.WriteLine(zList.Count);
-                    Console.WriteLine(zList.Capacity);
-                    Console.WriteLine(zList);
+                    Console.WriteLine($"Odds: {aList}");
+                    Console.WriteLine($"\nEvens: {bList}");
+                    Console.WriteLine($"\nZipped: {zList}");
+                    Console.WriteLine($"\nCount: {zList.Count}, Capacity: {zList.Capacity}");
                     Console.ReadLine();
                     break;
                 case 10:
                     CustomList<int> sortList = new CustomList<int>();
                     sortList.Add(99);
                     sortList.Add(33);
-                    sortList.Add(55); 
-                    Console.WriteLine(sortList);
+                    sortList.Add(55);
+                    sortList.Add(44);
+                    sortList.Add(22);
+                    sortList.Add(11);
+                    sortList.Add(66);
+                    sortList.Add(88);
+                    sortList.Add(77); 
+                    sortList.Add(61);
+                    
+                    Console.WriteLine($"Unsorted: {sortList}");
                     sortList.BubbleSort();
-                    Console.WriteLine(sortList);
+                    Console.WriteLine($"\nSorted: {sortList}");
+                    Console.WriteLine($"\nCount: {sortList.Count}, Capacity: {sortList.Capacity}");
                     Console.ReadLine();
                     break;
                 default:
