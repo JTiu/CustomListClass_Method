@@ -42,16 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IntDataArrayLawOffices.cs" />
     <Compile Include="CustomList.cs" />
-    <Compile Include="Lawyer.cs" />
-    <Compile Include="LawyerMenu.cs" />
-    <Compile Include="LegalFirmEmployee.cs" />
-    <Compile Include="PotentialJuror.cs" />
-    <Compile Include="IndexOverloadCountCapacityClass.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Trial.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

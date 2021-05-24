@@ -39,8 +39,6 @@ namespace LawyerClassMethod_Testing
                 //act in effect, going to test the function for expected result
                 listOfTowns.Add("Roswell");
 
-
-
                 //Assert
 
                 Assert.AreEqual("Roswell", listOfTowns[0]);
@@ -55,8 +53,6 @@ namespace LawyerClassMethod_Testing
 
                 //act in effect, going to test the function for expected result
                 bool result = listOfTowns.Remove("Roswell");
-
-
 
                 //Assert
 

@@ -143,6 +143,14 @@ namespace LawyerClass_Method
             return a;//new list, after combination a & b
 
         }
+        public static CustomList<T> operator -(CustomList<T> a, CustomList<T> b)       // overload the - operator,
+        {
+            for (int i = 0; i < b.Count; i++)
+            {
+                a.Remove(b[i]);//subtracts all the items from b to a, return the new a as new, smaller collection
+            }
+            return a;//new list, after reduction of b from a
+        }
         public CustomList<string> RemoveCourthouseFromShortArray()
         {
            CustomList<string> CourthouseToRemove = new CustomList<string>();

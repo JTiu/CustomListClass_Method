@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LawyerClass_Method", "LawyerClass_Method\LawyerClass_Method.csproj", "{F4C3F635-DA83-482A-9549-060D12124891}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListClass_Method", "LawyerClass_Method\ListClass_Method.csproj", "{F4C3F635-DA83-482A-9549-060D12124891}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LawyerClassMethod_Testing", "LawyerClassMethod_Testing\LawyerClassMethod_Testing.csproj", "{3CA67AA1-988F-4240-BCFC-0239DA14BB05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListClassMethod_Testing", "LawyerClassMethod_Testing\ListClassMethod_Testing.csproj", "{3CA67AA1-988F-4240-BCFC-0239DA14BB05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

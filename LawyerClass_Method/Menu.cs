@@ -15,7 +15,7 @@ namespace LawyerClass_Method
             Console.WriteLine("3. User Story #3: Index Array");
             Console.WriteLine("4. User Story #4: Check Capacity & Count Property");
             Console.WriteLine("5. User Story #5: Overloading + operator, overloading - operator");
-            Console.WriteLine("6. User Story #6 Using collection <T> for Ints");
+            Console.WriteLine("6. User Story #6  Using collection <T> for Ints");
             Console.WriteLine("7. User Story #7: Check Numeric Count & Capacity");
             Console.WriteLine("8. User Story #8: Another Removal Method");
 
@@ -175,8 +175,8 @@ namespace LawyerClass_Method
             secondArrayForOverload.Add("Fort Worth");
             Console.WriteLine($"\nAnother array, for overloading +:\n{secondArrayForOverload} \ncapacity: {secondArrayForOverload.Capacity}, count: {secondArrayForOverload.Count}");
             CustomList<string> combinedList = firstArrayForOverload + secondArrayForOverload;
-            Console.WriteLine($"\nA combined array, overloaded + operator: {combinedList} \ncapacity:{combinedList.Capacity}, count:{combinedList.Count}");
-            Console.WriteLine("Press enter to continue");
+            Console.WriteLine($"\nA combined array, overloaded + operator: \n{combinedList} \ncapacity:{combinedList.Capacity}, count:{combinedList.Count}");
+            Console.WriteLine("\nPress enter to continue");
             Console.ReadLine();
             Console.Clear();
             CustomList<string> thirdArrayForOverload = new CustomList<string>();
@@ -188,6 +188,10 @@ namespace LawyerClass_Method
             Console.WriteLine($"\nThird array, for overloading +:\n{thirdArrayForOverload} \ncapacity: {thirdArrayForOverload.Capacity}, count: {thirdArrayForOverload.Count}");
             CustomList<string> expandedList = combinedList + thirdArrayForOverload;
             Console.WriteLine($"\nAll three arrays, overloaded + operator: \n{expandedList} \ncapacity:{expandedList.Capacity}, count:{ expandedList.Count}");
+            CustomList<string> reducedList = expandedList - secondArrayForOverload;
+            Console.WriteLine($"\nReduced array, overloaded - operator: \n{reducedList}");
+            CustomList<string> furtherReducedList = reducedList - firstArrayForOverload;
+            Console.WriteLine($"\nFurther-reduced array, overloaded - operator: \n{furtherReducedList}");
 
         }
 

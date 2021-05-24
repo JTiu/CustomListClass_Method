@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LawyerClass_Method\LawyerClass_Method.csproj">
+    <ProjectReference Include="..\LawyerClass_Method\ListClass_Method.csproj">
       <Project>{f4c3f635-da83-482a-9549-060d12124891}</Project>
-      <Name>LawyerClass_Method</Name>
+      <Name>ListClass_Method</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
