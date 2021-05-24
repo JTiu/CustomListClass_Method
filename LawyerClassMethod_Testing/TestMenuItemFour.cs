@@ -7,33 +7,75 @@ namespace LawyerClassMethod_Testing
     public class TestMenuItemFour
     {
         [TestMethod]
-        public void Menu4_Remove_ShouldReturnTrue_IfItemExistsInList()//naming convention method, underscore, expected result. as third item needed, add an extra underscore. 
+        public void Menu4_CheckCapacity_ShouldBeTen()//naming convention method, underscore, expected result. as third item needed, add an extra underscore. 
         { //arrange
+           
             CustomList<string> Array = new CustomList<string>();
             Array.Add("Las Cruces");
             Array.Add("Mesilla");
             Array.Add("Roswell");
-            //Console.WriteLine($"A three item array, for capacity & count check:\n{Array}");
-            //Console.WriteLine($"\nCapacity is: {Array.Capacity}, Count is: {Array.Count}");
+            Array.Add("Las Cruces");
+
+            Assert.AreEqual(Array.Capacity, 10);
+        }
+        [TestMethod]
+        public void Menu4_CheckCapacity_ShouldBeTwenty()//naming convention method, underscore, expected result. as third item needed, add an extra underscore. 
+        { //arrange
+
+            CustomList<string> Array = new CustomList<string>();
+            Array.Add("Las Cruces");
+            Array.Add("Mesilla");
+            Array.Add("Roswell");
+            Array.Add("Las Cruces");
+            Array.Add("Mesilla");
+            Array.Add("Roswell");
+            Array.Add("Las Cruces");
+            Array.Add("Mesilla");
+            Array.Add("Roswell");
+            Array.Add("Las Cruces");
+            Array.Add("Mesilla");
+            Array.Add("Roswell");
+            Array.Add("Las Cruces");
+            Array.Add("Mesilla");
+            Array.Add("Roswell");
+
+            Assert.AreEqual(Array.Capacity, 20);
         }
 
         [TestMethod]
-        public void CheckIndex()//naming convbention 'method, underscore, expected result. whenever third item needed, add an extra underscore. nned to add areference.
+        public void Menu4_CheckCount_ShouldBeThree()//naming convention method, underscore, expected result. as third item needed, add an extra underscore. 
         { //arrange
-            CustomList<string> addToIndex = new CustomList<string>();//empty list
 
-            //act in effect, going to test the function for expected result
-            addToIndex.Add("X");
-            addToIndex.Add("Y");
-            addToIndex.Add("Z");
-            //Assert
+            CustomList<string> Array = new CustomList<string>();
+          
+            Array.Add("Mesilla");
+            Array.Add("Roswell");
+            Array.Add("Las Cruces");
 
-            Assert.AreEqual("X", addToIndex[0]);
-            Assert.AreEqual("Y", addToIndex[1]);
+            Assert.AreEqual(Array.Count, 3);
         }
+        [TestMethod]
+        public void Menu4_CheckCount_ShouldBeFifteen()//naming convention method, underscore, expected result. as third item needed, add an extra underscore. 
+        { //arrange
 
+            CustomList<string> Array = new CustomList<string>();
+            Array.Add("Las Cruces");
+            Array.Add("Mesilla");
+            Array.Add("Roswell");
+            Array.Add("Las Cruces");
+            Array.Add("Mesilla");
+            Array.Add("Roswell");
+            Array.Add("Las Cruces");
+            Array.Add("Mesilla");
+            Array.Add("Roswell");
+            Array.Add("Las Cruces");
+            Array.Add("Mesilla");
+            Array.Add("Roswell");
+            Array.Add("Las Cruces");
+            Array.Add("Mesilla");
+            Array.Add("Roswell");
 
-
-
+            Assert.AreEqual(Array.Count, 15);
+        }
     }
 }

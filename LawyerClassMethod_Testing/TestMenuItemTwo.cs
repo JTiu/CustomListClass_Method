@@ -47,7 +47,6 @@ namespace LawyerClassMethod_Testing
 
             Assert.IsTrue(result);
         }
-
         [TestMethod]
         public void Menu2_Remove_ItemFromShortArray_IsFalse()//naming convention 'method, underscore, expected result. as third item needed, add an extra underscore. 
         { //arrange
@@ -59,7 +58,6 @@ namespace LawyerClassMethod_Testing
             bool result = NM_CourthouseCollectionForRemoval.Remove("AnotherCourthouse");
 
             //Assert
-
             Assert.IsFalse(result);
         }
     }

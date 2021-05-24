@@ -41,8 +41,6 @@ namespace LawyerClassMethod_Testing
             CourthouseToAdd.Add("Clovis");
             CourthouseToAdd.Add("White Sands");
             CourthouseToAdd.Add("Truth or Consequence");
-
-
             //act is the add method
         }
 
@@ -58,9 +56,6 @@ namespace LawyerClassMethod_Testing
             CourthouseToAdd.Add("A1");
             CourthouseToAdd.Add("12121");
             CourthouseToAdd.Add("&&&&&&&");
-
-
-
             //act is the add method
         }
         [TestMethod]
@@ -75,11 +70,6 @@ namespace LawyerClassMethod_Testing
 
             Assert.AreEqual("&&&&&&", listOfTowns[0]);
         }
-
-
-
-
-
     }
 }
 

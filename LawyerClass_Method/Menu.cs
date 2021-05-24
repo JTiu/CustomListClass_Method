@@ -191,7 +191,6 @@ namespace LawyerClass_Method
             Console.WriteLine($"\nReduced array, overloaded - operator: \n{reducedList}");
             CustomList<string> furtherReducedList = reducedList - firstArrayForOverload;
             Console.WriteLine($"\nFurther-reduced array, overloaded - operator: \n{furtherReducedList}");
-
         }
 
         public void DirectUser(int option)

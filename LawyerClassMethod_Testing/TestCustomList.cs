@@ -1,6 +1,5 @@
 ﻿using LawyerClass_Method;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace LawyerClassMethod_Testing
 {
@@ -26,7 +25,6 @@ namespace LawyerClassMethod_Testing
             CourthouseToAdd.Add("White Sands");
             CourthouseToAdd.Add("Truth or Consequences");
             CourthouseToAdd.Add("Cloudcroft");
-            
 
             //act is the add method
         }
@@ -68,7 +66,6 @@ namespace LawyerClassMethod_Testing
         public void MenuItemOne_CreateArrayWithIntegersAndSymbolsIncludedInString()
         {
             //arrange is the new list
-
             CustomList<string> CourthouseToAdd = new CustomList<string>();//this is the arrange: a new custom list
             CourthouseToAdd.Add("XXXXXXXX");//these are the 13 'actions'
             CourthouseToAdd.Add("YYYYYY");
@@ -79,46 +76,42 @@ namespace LawyerClassMethod_Testing
             //act is the add method
         }
         [TestMethod]
-            public void MenuItemOne_Add_ShouldAddItemToEmptyList()//naming convention 'method, underscore, expected result. whenever third item needed, add an extra underscore. nned to add areference.
-            { //arrange
-                CustomList<string> listOfTowns = new CustomList<string>();//empty list
+        public void MenuItemOne_Add_ShouldAddItemToEmptyList()//naming convention 'method, underscore, expected result. whenever third item needed, add an extra underscore. nned to add areference.
+        { //arrange
+            CustomList<string> listOfTowns = new CustomList<string>();//empty list
+            //act in effect, going to test the function for expected result
+            listOfTowns.Add("Roswell");
+            //Assert
+            Assert.AreEqual("Roswell", listOfTowns[0]);
+        }
 
-                //act in effect, going to test the function for expected result
-                listOfTowns.Add("Roswell");
+        [TestMethod]
+        public void MenuItemOne_Remove_ShouldReturnTrue_IfItemExistsInList()//naming convbention 'method, underscore, expected result. as third item needed, add an extra underscore. 
+        { //arrange
+            CustomList<string> listOfTowns = new CustomList<string>();//empty list
+            listOfTowns.Add("Roswell");
+            listOfTowns.Add("Mesilla");
 
-                //Assert
+            //act in effect, going to test the function for expected result
+            bool result = listOfTowns.Remove("Roswell");
 
-                Assert.AreEqual("Roswell", listOfTowns[0]);
-            }
+            //Assert
 
-            [TestMethod]
-            public void MenuItemOne_Remove_ShouldReturnTrue_IfItemExistsInList()//naming convbention 'method, underscore, expected result. as third item needed, add an extra underscore. 
-            { //arrange
-                CustomList<string> listOfTowns = new CustomList<string>();//empty list
-                listOfTowns.Add("Roswell");
-                listOfTowns.Add("Mesilla");
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void Remove_ShouldReturnFalse_IfItemDoesNotExistInList()//naming convbention 'method, underscore, expected result. as third item needed, add an extra underscore. 
+        { //arrange
+            CustomList<string> listOfTowns = new CustomList<string>();//empty list
+            listOfTowns.Add("Roswell");
+            listOfTowns.Add("Mesilla");
 
-                //act in effect, going to test the function for expected result
-                bool result = listOfTowns.Remove("Roswell");
+            //act in effect, going to test the function for expected result
+            bool result = listOfTowns.Remove("Las Cruces");
+            //Assert
 
-                //Assert
-
-                Assert.IsTrue(result);
-            }
-            [TestMethod]
-            public void Remove_ShouldReturnFalse_IfItemDoesNotExistInList()//naming convbention 'method, underscore, expected result. as third item needed, add an extra underscore. 
-            { //arrange
-                CustomList<string> listOfTowns = new CustomList<string>();//empty list
-                listOfTowns.Add("Roswell");
-                listOfTowns.Add("Mesilla");
-
-                //act in effect, going to test the function for expected result
-                bool result = listOfTowns.Remove("Las Cruces");
-                //Assert
-
-                Assert.IsFalse(result);
-            }
-
+            Assert.IsFalse(result);
         }
     }
+}
 
