@@ -98,7 +98,27 @@ namespace LawyerClass_Method
             Console.WriteLine($"second town, index[1]:  {AddToIndex[1]}");
             Console.WriteLine($"third town, index[2]:   {AddToIndex[2]}");
         }
-        public void XZip()
+        public void Sort()
+        {
+            CustomList<int> sortList = new CustomList<int>();
+            sortList.Add(99);
+            sortList.Add(33);
+            sortList.Add(55);
+            sortList.Add(44);
+            sortList.Add(22);
+            sortList.Add(11);
+            sortList.Add(66);
+            sortList.Add(88);
+            sortList.Add(77);
+            sortList.Add(61);
+
+            Console.WriteLine($"Unsorted: {sortList}");
+            sortList.BubbleSort();
+            Console.WriteLine($"\nSorted: {sortList}");
+            Console.WriteLine($"\nCount: {sortList.Count}, Capacity: {sortList.Capacity}");
+            Console.ReadLine();
+        }
+        public void Zip()
         {
             CustomList<int> aList = new CustomList<int>();
             aList.Add(1);
@@ -259,28 +279,14 @@ namespace LawyerClass_Method
                     Console.ReadLine();
                     break;
                 case 9:
-                    XZip();
+                    Zip();
                     Console.ReadLine();
                     
                     break;
                 case 10:
-                    CustomList<int> sortList = new CustomList<int>();
-                    sortList.Add(99);
-                    sortList.Add(33);
-                    sortList.Add(55);
-                    sortList.Add(44);
-                    sortList.Add(22);
-                    sortList.Add(11);
-                    sortList.Add(66);
-                    sortList.Add(88);
-                    sortList.Add(77); 
-                    sortList.Add(61);
-                    
-                    Console.WriteLine($"Unsorted: {sortList}");
-                    sortList.BubbleSort();
-                    Console.WriteLine($"\nSorted: {sortList}");
-                    Console.WriteLine($"\nCount: {sortList.Count}, Capacity: {sortList.Capacity}");
+                    Sort();
                     Console.ReadLine();
+                    
                     break;
                 default:
                     Console.WriteLine("Entry was incorrect, please enter a number as listed above");
