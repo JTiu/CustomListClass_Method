@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace LawyerClass_Method
 {
@@ -18,6 +19,7 @@ namespace LawyerClass_Method
             Console.WriteLine("6. User Story #6  Using collection <T> for Ints");
             Console.WriteLine("7. User Story #7: Check Numeric Count & Capacity");
             Console.WriteLine("8. User Story #8: Another Removal Method");
+            Console.WriteLine("9. User Story #9: zip");
 
             bool invalidEntry = true; //this bool insures that an invalid entry is not entered
             string result = "";
@@ -135,7 +137,7 @@ namespace LawyerClass_Method
             Array.Add(19);
             Array.Add(20);
             Array.Add(21);
-            
+
             Console.WriteLine($"\nA new array of items, for capacity check:\n{Array}");
             Console.WriteLine($"\nNow, capacity is: {Array.Capacity}");
             Console.WriteLine($"\nNow, count is: {Array.Count}");
@@ -192,6 +194,7 @@ namespace LawyerClass_Method
             CustomList<string> furtherReducedList = reducedList - firstArrayForOverload;
             Console.WriteLine($"\nFurther-reduced array, overloaded - operator: \n{furtherReducedList}");
         }
+        
 
         public void DirectUser(int option)
         {
@@ -230,6 +233,11 @@ namespace LawyerClass_Method
                     break;
                 case 8:
                     AnotherRemovalMethod();
+                    Console.ReadLine();
+                    break;
+                case 9:
+                    CustomList<string> zipList = new CustomList<string>();
+                    zipList.ZipMethod();
                     Console.ReadLine();
                     break;
                 default:

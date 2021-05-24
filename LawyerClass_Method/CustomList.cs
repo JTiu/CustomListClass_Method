@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace LawyerClass_Method
 {
@@ -183,11 +184,26 @@ namespace LawyerClass_Method
                 return itemsInArray[index];
             }
         }
+        public CustomList<string> ZipMethod()
+        {
+            CustomList<string> CourthouseToRemove = new CustomList<string>();
+            var array1 = new string[] { "Mesilla, ", "Las Cruces, ", "El Paso, " };
+            var array2 = new string[] { "NM", "NM", "TX"};
+
+            // Concatenate elements at each position together.
+            var zip = array1.Zip(array2, (a, b) => (a + b));
+            Console.WriteLine("Zipper:");
+            
+
+            //    // Look at results.
+            foreach (var value in zip)
+            {
+                Console.WriteLine("ZIP: {0}", value);
+            }
+
+            return (CustomList<string>)zip;
+           
+        }
+       
     }
-
-
-
-
-
-
 }

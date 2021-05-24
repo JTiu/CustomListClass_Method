@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace LawyerClass_Method
 {
@@ -6,6 +7,8 @@ namespace LawyerClass_Method
     {
         static void Main(string[] args)
         {//starts menu
+         
+
             Menu startMenu = new Menu();
             int optionPicked;
             optionPicked = startMenu.DrawMenu(); //
