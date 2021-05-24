@@ -184,25 +184,20 @@ namespace LawyerClass_Method
                 return itemsInArray[index];
             }
         }
-        public CustomList<string> ZipMethod()
+        public CustomList<T> ZipMethod(CustomList<T> bList)
         {
-            CustomList<string> CourthouseToRemove = new CustomList<string>();
-            var array1 = new string[] { "Mesilla, ", "Las Cruces, ", "El Paso, " };
-            var array2 = new string[] { "NM", "NM", "TX"};
-
-            // Concatenate elements at each position together.
-            var zip = array1.Zip(array2, (a, b) => (a + b));
-            Console.WriteLine("Zipper:");
-            
-
-            //    // Look at results.
-            foreach (var value in zip)
+           if(this.Count != bList.Count)
             {
-                Console.WriteLine("ZIP: {0}", value);
+                throw new Exception("not equal count, will not zip");
             }
+            CustomList<T> zipList = new CustomList<T>();
+            for (int i = 0; i < bList.Count; i++)
+            {
+                zipList.Add(itemsInArray[i]);
+                zipList.Add(bList[i]);
 
-            return (CustomList<string>)zip;
-           
+            }
+            return zipList;
         }
        
     }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace LawyerClass_Method
 {
@@ -194,7 +193,7 @@ namespace LawyerClass_Method
             CustomList<string> furtherReducedList = reducedList - firstArrayForOverload;
             Console.WriteLine($"\nFurther-reduced array, overloaded - operator: \n{furtherReducedList}");
         }
-        
+
 
         public void DirectUser(int option)
         {
@@ -236,8 +235,20 @@ namespace LawyerClass_Method
                     Console.ReadLine();
                     break;
                 case 9:
-                    CustomList<string> zipList = new CustomList<string>();
-                    zipList.ZipMethod();
+                    CustomList<int> aList = new CustomList<int>();
+                    aList.Add(1);
+                    aList.Add(3);
+                    aList.Add(5);
+                    CustomList<int> bList = new CustomList<int>();
+                    bList.Add(2);
+                    bList.Add(4);
+                    bList.Add(6);
+                    CustomList<int> zList = aList.ZipMethod(bList);
+                    Console.WriteLine(aList);
+                    Console.WriteLine(bList);
+                    Console.WriteLine(zList.Count);
+                    Console.WriteLine(zList.Capacity);
+                    Console.WriteLine(zList);
                     Console.ReadLine();
                     break;
                 default:
