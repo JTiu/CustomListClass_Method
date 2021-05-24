@@ -134,6 +134,15 @@ namespace LawyerClass_Method
             }
             return result;
         }
+        public static CustomList<T> operator +(CustomList<T> a, CustomList<T> b)       // overload the + operator,
+        {
+            for (int i = 0; i < b.Count; i++)
+            {
+                a.Add(b[i]);//adds all the items from b to a, return the new a as combined collection
+            }
+            return a;//new list, after combination a & b
+
+        }
         public CustomList<string> RemoveCourthouseFromShortArray()
         {
            CustomList<string> CourthouseToRemove = new CustomList<string>();

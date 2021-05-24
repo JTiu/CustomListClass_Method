@@ -14,9 +14,9 @@ namespace LawyerClass_Method
             Console.WriteLine("2. User Story #2: Remove items from a short array");
             Console.WriteLine("3. User Story #3: Index Array");
             Console.WriteLine("4. User Story #4: Check Capacity & Count Property");
-            Console.WriteLine("5. User Story #5");
-            Console.WriteLine("6. User Story #6 Testin whether <T> accepts Ints");
-            Console.WriteLine("7. User Story #7: check Numeric Count & Capacity");
+            Console.WriteLine("5. User Story #5: Overloading + operator, overloading - operator");
+            Console.WriteLine("6. User Story #6 Using collection <T> for Ints");
+            Console.WriteLine("7. User Story #7: Check Numeric Count & Capacity");
             Console.WriteLine("8. User Story #8: Another Removal Method");
 
             bool invalidEntry = true; //this bool insures that an invalid entry is not entered
@@ -38,11 +38,12 @@ namespace LawyerClass_Method
 
             return int.Parse(result);
         }
+
         public bool isValidEntry(string result)
         {
-            //This method will check two things: 1) if th string can b pars to an int 2) if they entered an int - was the int 1-6 (EX: 15 is not a menu option)
+            //This method will check two things: 1) if the string can b pars to an int; 2) (EX: 15 is not a menu option)
             int number;
-            bool isNumeric = int.TryParse(result, out number); //This is a method that checks if a string can be parsed into a int. EX: "2" - this would return TRUE, EX: "greg" this would return FALSE
+            bool isNumeric = int.TryParse(result, out number); //This is a method that checks if a string can be parsed into a int. EX: "2" - this would return TRUE, EX: "yes" this would return FALSE
             return isNumeric;
         }
 
@@ -124,7 +125,7 @@ namespace LawyerClass_Method
             Array.Add(12);
             Array.Add(13);
 
-            Console.WriteLine($"An array of three New Mexico Courthouses, for capacity & count check:\n{Array}");
+            Console.WriteLine($"An array of three items, for capacity & count check:\n{Array}");
             Console.WriteLine($"\nCapacity is: {Array.Capacity}, Count is: {Array.Count}");
             Array.Add(14);
             Array.Add(15);
@@ -136,7 +137,7 @@ namespace LawyerClass_Method
             Array.Add(21);
             //Array.Add(22);
             //Array.Add(23);
-            Console.WriteLine($"\nA new array of Courthouses, for capacity check:\n{Array}");
+            Console.WriteLine($"\nA new array of items, for capacity check:\n{Array}");
             Console.WriteLine($"\nNow, capacity is: {Array.Capacity}");
             Console.WriteLine($"\nNow, count is: {Array.Count}");
         }
@@ -149,35 +150,47 @@ namespace LawyerClass_Method
             CourthouseToAdd.Add("Albuquerque: #4");
             CourthouseToAdd.Add("Santa Fe:    #5");
 
-            Console.WriteLine($"A shorter array of New Mexico Courthouses, for removal method of two courthouses:\n{CourthouseToAdd}");
+            Console.WriteLine($"A short array of items, for removal method of two items:\n{CourthouseToAdd}");
 
             string secondTown = CourthouseToAdd[1];
             string fourthTown = CourthouseToAdd[3];
-            Console.WriteLine($"\nsecond town is: {secondTown}\nfourth town is: {fourthTown}");
+            Console.WriteLine($"\nsecond item is: {secondTown}\nfourth item is: {fourthTown}");
             CourthouseToAdd.Remove(secondTown);
             CourthouseToAdd.Remove(fourthTown);
 
-            Console.WriteLine($"\nlist, after removal of second town and fourth town:\n{CourthouseToAdd.ToString()}");
+            Console.WriteLine($"\nlist, after removal of second item and fourth item:\n{CourthouseToAdd.ToString()}");
             //return CourthouseToAdd;
-
         }
         public void OverloadingOperators()
         {
-            Console.WriteLine("Do some overloading here");
+            Console.WriteLine("Overloading:");
             CustomList<string> firstArrayForOverload = new CustomList<string>();
             firstArrayForOverload.Add("Las Cruces");
             firstArrayForOverload.Add("Mesilla");
             firstArrayForOverload.Add("Roswell");
-            Console.WriteLine($"\nAn array, for capacity check:\n{firstArrayForOverload}, capacity: {firstArrayForOverload.Capacity}");
-            Console.WriteLine($"\ncountcheck:\n{firstArrayForOverload.Count}");
+            Console.WriteLine($"\nAn array, for overloading +:\n{firstArrayForOverload} \ncapacity: {firstArrayForOverload.Capacity}, count {firstArrayForOverload.Count}");
             CustomList<string> secondArrayForOverload = new CustomList<string>();
             secondArrayForOverload.Add("El Paso");
             secondArrayForOverload.Add("Amarillo");
             secondArrayForOverload.Add("Fort Worth");
+            Console.WriteLine($"\nAnother array, for overloading +:\n{secondArrayForOverload} \ncapacity: {secondArrayForOverload.Capacity}, count: {secondArrayForOverload.Count}");
+            CustomList<string> combinedList = firstArrayForOverload + secondArrayForOverload;
+            Console.WriteLine($"\nA combined array, overloaded + operator: {combinedList} \ncapacity:{combinedList.Capacity}, count:{combinedList.Count}");
+            Console.WriteLine("Press enter to continue");
+            Console.ReadLine();
+            Console.Clear();
+            CustomList<string> thirdArrayForOverload = new CustomList<string>();
+            thirdArrayForOverload.Add("Alameda Depot");
+            thirdArrayForOverload.Add("Organ Mountains");
+            thirdArrayForOverload.Add("Bosque State");
+            thirdArrayForOverload.Add("University Drive");
+            thirdArrayForOverload.Add("Agua Frio");
+            Console.WriteLine($"\nThird array, for overloading +:\n{thirdArrayForOverload} \ncapacity: {thirdArrayForOverload.Capacity}, count: {thirdArrayForOverload.Count}");
+            CustomList<string> expandedList = combinedList + thirdArrayForOverload;
+            Console.WriteLine($"\nAll three arrays, overloaded + operator: \n{expandedList} \ncapacity:{expandedList.Capacity}, count:{ expandedList.Count}");
 
-            Console.WriteLine($"\nAn array, for capacity check:\n{secondArrayForOverload}, capacity: {secondArrayForOverload.Capacity}");
-            Console.WriteLine($"\ncountcheck:\n{firstArrayForOverload.Count}");
         }
+
         public void DirectUser(int option)
         {
             Console.Clear();
