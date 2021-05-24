@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestMenuItemTen.cs" />
     <Compile Include="TestMenuItemSix.cs" />
     <Compile Include="TestMenuItemFive.cs" />
     <Compile Include="TestMenuItemFour.cs" />
@@ -58,7 +59,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestMenuItemThree.cs" />
     <Compile Include="Sort.cs" />
-    <Compile Include="Zip.cs" />
+    <Compile Include="TestMenuItemNine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
