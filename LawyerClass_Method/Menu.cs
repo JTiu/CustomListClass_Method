@@ -98,6 +98,29 @@ namespace LawyerClass_Method
             Console.WriteLine($"second town, index[1]:  {AddToIndex[1]}");
             Console.WriteLine($"third town, index[2]:   {AddToIndex[2]}");
         }
+        public void XZip()
+        {
+            CustomList<int> aList = new CustomList<int>();
+            aList.Add(1);
+            aList.Add(3);
+            aList.Add(5);
+            aList.Add(7);
+            aList.Add(9);
+
+            CustomList<int> bList = new CustomList<int>();
+            bList.Add(2);
+            bList.Add(4);
+            bList.Add(6);
+            bList.Add(8);
+            bList.Add(10);
+            CustomList<int> zList = aList.ZipMethod(bList);
+            Console.WriteLine($"Odds: {aList}");
+            Console.WriteLine($"\nEvens: {bList}");
+            Console.WriteLine($"\nZipped: {zList}");
+            Console.WriteLine($"\nCount: {zList.Count}, Capacity: {zList.Capacity}");
+            Console.ReadLine();
+
+        }
         public void CheckCapacityAndCount()
         {
             CustomList<string> Array = new CustomList<string>();
@@ -236,25 +259,9 @@ namespace LawyerClass_Method
                     Console.ReadLine();
                     break;
                 case 9:
-                    CustomList<int> aList = new CustomList<int>();
-                    aList.Add(1);
-                    aList.Add(3);
-                    aList.Add(5);
-                    aList.Add(7);
-                    aList.Add(9);
-                    
-                    CustomList<int> bList = new CustomList<int>();
-                    bList.Add(2);
-                    bList.Add(4);
-                    bList.Add(6);
-                    bList.Add(8);
-                    bList.Add(10);
-                    CustomList<int> zList = aList.ZipMethod(bList);
-                    Console.WriteLine($"Odds: {aList}");
-                    Console.WriteLine($"\nEvens: {bList}");
-                    Console.WriteLine($"\nZipped: {zList}");
-                    Console.WriteLine($"\nCount: {zList.Count}, Capacity: {zList.Capacity}");
+                    XZip();
                     Console.ReadLine();
+                    
                     break;
                 case 10:
                     CustomList<int> sortList = new CustomList<int>();
