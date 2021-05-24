@@ -66,7 +66,7 @@ namespace LawyerClass_Method
             Console.WriteLine($"Create an array, add thirteen items (New Mexico Courthouses):\n{CourthouseToAdd}");
             return CourthouseToAdd;
         }
-        public void CreateNumericRoute()
+        public void CreateNumericArray()
         {
             CustomList<int> CourthouseToAdd = new CustomList<int>();
             CourthouseToAdd.Add(11);
@@ -221,7 +221,7 @@ namespace LawyerClass_Method
                     Console.ReadLine();
                     break;
                 case 6:
-                    CreateNumericRoute();
+                    CreateNumericArray();
                     Console.ReadLine();
                     break;
                 case 7:

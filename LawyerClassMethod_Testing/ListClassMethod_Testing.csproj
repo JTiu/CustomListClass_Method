@@ -49,6 +49,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestMenuItemSix.cs" />
+    <Compile Include="TestMenuItemFive.cs" />
     <Compile Include="TestMenuItemFour.cs" />
     <Compile Include="TestMenuItemTwo.cs" />
     <Compile Include="TestMenuItemOne.cs" />
