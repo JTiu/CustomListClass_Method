@@ -26,7 +26,7 @@ namespace LawyerClass_Method
             {
                 result = Console.ReadLine();
 
-                if (isValidEntry(result) == true)
+                if (IsValidEntry(result) == true)
                 {
                     invalidEntry = false;
                 }
@@ -39,7 +39,7 @@ namespace LawyerClass_Method
             return int.Parse(result);
         }
 
-        public bool isValidEntry(string result)
+        public bool IsValidEntry(string result)
         {
             //This method will check two things: 1) if the string can b pars to an int; 2) (EX: 15 is not a menu option)
             int number;
@@ -135,8 +135,7 @@ namespace LawyerClass_Method
             Array.Add(19);
             Array.Add(20);
             Array.Add(21);
-            //Array.Add(22);
-            //Array.Add(23);
+            
             Console.WriteLine($"\nA new array of items, for capacity check:\n{Array}");
             Console.WriteLine($"\nNow, capacity is: {Array.Capacity}");
             Console.WriteLine($"\nNow, count is: {Array.Count}");

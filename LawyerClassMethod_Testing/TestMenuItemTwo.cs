@@ -40,6 +40,7 @@ namespace LawyerClassMethod_Testing
             NM_CourthouseCollectionForRemoval.RemoveCourthouseFromShortArray();
             NM_CourthouseCollectionForRemoval.Add("ThisCourthouse");
             NM_CourthouseCollectionForRemoval.Add("ThatCourthouse");
+
             bool result = NM_CourthouseCollectionForRemoval.Remove("ThisCourthouse");
 
             //Assert
@@ -54,6 +55,7 @@ namespace LawyerClassMethod_Testing
             NM_CourthouseCollectionForRemoval.RemoveCourthouseFromShortArray();
             NM_CourthouseCollectionForRemoval.Add("ThisCourthouse");
             NM_CourthouseCollectionForRemoval.Add("ThatCourthouse");
+
             bool result = NM_CourthouseCollectionForRemoval.Remove("AnotherCourthouse");
 
             //Assert

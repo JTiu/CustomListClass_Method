@@ -49,10 +49,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestMenuItemFour.cs" />
     <Compile Include="TestMenuItemTwo.cs" />
     <Compile Include="TestMenuItemOne.cs" />
     <Compile Include="TestCustomList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestMenuItemThree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
