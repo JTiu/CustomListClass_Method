@@ -251,6 +251,16 @@ namespace LawyerClass_Method
                     Console.WriteLine(zList);
                     Console.ReadLine();
                     break;
+                case 10:
+                    CustomList<int> sortList = new CustomList<int>();
+                    sortList.Add(99);
+                    sortList.Add(33);
+                    sortList.Add(55); 
+                    Console.WriteLine(sortList);
+                    sortList.BubbleSort();
+                    Console.WriteLine(sortList);
+                    Console.ReadLine();
+                    break;
                 default:
                     Console.WriteLine("Entry was incorrect, please enter a number as listed above");
                     break;

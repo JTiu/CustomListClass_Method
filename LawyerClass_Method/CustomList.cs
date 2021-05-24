@@ -3,9 +3,10 @@ using System.Linq;
 
 namespace LawyerClass_Method
 {
-    public class CustomList<T>
+    public class CustomList<T>where T: IComparable   //this 'where' class needed for bubble sort.
     {
-        private T[] itemsInArray; //array indicated by the T[], followed by name, need a constructor
+        private T[] itemsInArray; //array indicated by the T[], followed by name, need a constructor; if going to include a bubble sort, may need to place a conditon on T
+        
 
         public int Capacity ////As a developer, I want a #3 Capacity: How many? ten.
         {
@@ -199,6 +200,23 @@ namespace LawyerClass_Method
             }
             return zipList;
         }
-       
+        public void BubbleSort()//could have used insertion, selection, or divide and conquer sorting algorithms
+        {
+            var itemMoved = false;
+            do
+            {
+                itemMoved = false;
+                for (int i = 0; i < itemsInArray.Count() - 1; i++)
+                {
+                    if (itemsInArray[i].CompareTo(itemsInArray[i + 1])>0)
+                    {
+                        var lowerValue = itemsInArray[i + 1];
+                        itemsInArray[i + 1] = itemsInArray[i];
+                        itemsInArray[i] = lowerValue;
+                        itemMoved = true;
+                    }
+                }
+            } while (itemMoved);
+        }
     }
 }
