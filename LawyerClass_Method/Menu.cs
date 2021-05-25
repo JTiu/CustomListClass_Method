@@ -7,7 +7,7 @@ namespace LawyerClass_Method
         //Methods
         public int DrawMenu()  //going to draw my menu of choices, contestant, sweep, winner
         {
-            Console.WriteLine("The Custom List Menu");
+            Console.WriteLine("Custom List Menu");
             Console.WriteLine("------------------------------------");
             Console.WriteLine();
             Console.WriteLine("1. User Story #1: Create a Collection <T>, add string items to the Array");
@@ -71,10 +71,10 @@ namespace LawyerClass_Method
         public void CreateNumericArray()
         {
             CustomList<int> CourthouseToAdd = new CustomList<int>();
+            CourthouseToAdd.Add(10);
             CourthouseToAdd.Add(11);
             CourthouseToAdd.Add(12);
             CourthouseToAdd.Add(13);
-            CourthouseToAdd.Add(14);
             CourthouseToAdd.Add(14);
             CourthouseToAdd.Add(15);
             CourthouseToAdd.Add(16);
