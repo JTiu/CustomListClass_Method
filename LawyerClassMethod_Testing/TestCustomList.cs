@@ -1,7 +1,7 @@
-﻿using LawyerClass_Method;
+﻿using CustomListClass_Method;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LawyerClassMethod_Testing
+namespace CustomListClassMethod_Testing
 {
     [TestClass]
     public class TestCustomList

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace LawyerClass_Method
+namespace CustomListClass_Method
 {
     class Program
     {

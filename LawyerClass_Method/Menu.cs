@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LawyerClass_Method
+namespace CustomListClass_Method
 {
     public class Menu
     {
